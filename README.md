@@ -229,7 +229,7 @@ Penjelasan:
 
 #### Lihat transaksi berdasarkan username
 
-<img width="797" height="588" alt="image" src="https://github.com/user-attachments/assets/7d1120b9-88a8-4f55-975b-af77fa07ed67" />
+<img width="642" height="228" alt="image" src="https://github.com/user-attachments/assets/ce6d9247-af3c-4503-b402-99f0ab28d3db" />
 
 Penjelasan:
 
