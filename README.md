@@ -109,7 +109,7 @@ Keluar (Pilihan 3): Keluar dari program (END)
 
 ---
 
-## 7. Screenshot Output & Penjelasan Kode
+## 7. Screenshot Output & Penjelasan 
 
 ### Tampilan menu utama
 
@@ -177,9 +177,27 @@ Penjelasan:
 
 Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel
 
-## Ubah sisa hari sewa
+#### Ubah sisa hari sewa
 
 <img width="635" height="217" alt="image" src="https://github.com/user-attachments/assets/9e96bf38-62fe-497d-86d3-862e959554f3" />
+
+Penjelasan: 
+
+#### Validasi checkout
+
+<img width="593" height="90" alt="image" src="https://github.com/user-attachments/assets/2e3b9162-70f5-4958-a358-77463552ad44" />
+
+Penjelasan: 
+
+### Tambah kamar
+
+<img width="576" height="131" alt="image" src="https://github.com/user-attachments/assets/b886c72c-78b5-4177-942b-0485dd27d9e5" />
+
+Penjelasan: 
+
+### Lihat saldo 
+
+<img width="576" height="131" alt="image" src="https://github.com/user-attachments/assets/74b8efcf-bd13-449b-975f-ece1af64845d" />
 
 Penjelasan: 
 
