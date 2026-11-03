@@ -86,6 +86,21 @@ Keluar (Pilihan 3): Keluar dari program (END)
 <img width="4812" height="1622" alt="flowchart terbaru-Halaman-2 drawio" src="https://github.com/user-attachments/assets/b21da00a-c56a-429c-8b79-0e7e83815cd7" />
 
 
+Kelola Kamar: Admin dapat melihat status seluruh kamar (tersedia maupun terpakai). Di dalam sub-menu ini, Admin bisa memilih dua tindakan:
+
+Ubah sisa hari: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu Admin menginput sisa hari penyewaan yang baru sebelum disimpan ke file JSON.
+
+Validasi Check-out: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu meminta konfirmasi checkout untuk memperbarui status kamar di file JSON.
+
+Tambah Kamar: Admin dapat menambahkan kamar baru dengan menentukan tipe kamar (L atau P) serta memilih apakah kamar tersebut fasilitas AC atau tidak. Data kamar baru ini langsung disimpan ke file JSON.
+
+Lihat Saldo & Keuangan: Admin dapat mengecek total saldo sistem yang dihitung secara otomatis dari pemasukan dan pengeluaran pada file JSON, Admin juga bisa memproses pembayaran tagihan serta mencetak invoice.
+
+Hapus Akun User: Admin melihat daftar akun user lalu memasukkan username yang ingin dihapus. Sistem akan mengecek apakah username ada di file JSON dan memverifikasi syarat penghapusan (yaitu user tidak sedang menyewa kamar dan saldonya 0). Jika syarat terpenuhi, akun berhasil dihapus.
+
+Laporan Transaksi: Admin bisa melihat seluruh riwayat transaksi yang ada di JSON atau melakukan pencarian riwayat transaksi berdasarkan username pelanggan
+
+
 <img width="2022" height="1947" alt="flowchart terbaru-Halaman-3 drawio" src="https://github.com/user-attachments/assets/442ee031-0bbd-4506-90a9-4adfee9a3f13" />
 
 
