@@ -142,19 +142,19 @@ Keluar (Pilihan 3): Keluar dari program (END)
 
 <img width="443" height="178" alt="image" src="https://github.com/user-attachments/assets/96c58ec8-d041-4010-84c5-54772cb6feb0" />
 
-Penjelasan:
+Penjelasan: saat program dijalankan, sistem akan menampilkan menu utama dengan tiga pilihan, yaitu: 1) Register 2) Login 3) Keluar 
 
 ### 7.1.2. Registrasi
 
 <img width="432" height="95" alt="image" src="https://github.com/user-attachments/assets/1992f166-aa7b-490f-b13c-e876114fd2b3" />
 
-Penjelasan:
+Penjelasan: jika user memilih opsi registrasi, sistem meminta user untuk menginput username baru dan password baru. setelah itu, sistem menyimpan dalam file users.json
 
 ### 7.1.3. Login (sebagai user atau penyewa kos)
 
 <img width="425" height="90" alt="image" src="https://github.com/user-attachments/assets/b47cd456-4e55-4328-a6a8-7060d86ac689" />
 
-Penjelasan: 
+Penjelasan: setelah melakukan registrasi, user disilahkan login dengan menginput username dan password untuk dapat mengakses menu user
 
 #### Cek kamar yang sedang disewa
 
