@@ -126,19 +126,38 @@ Penjelasan:
 ### Login (sebagai user atau penyewa kos)
 
 <img width="425" height="90" alt="image" src="https://github.com/user-attachments/assets/b47cd456-4e55-4328-a6a8-7060d86ac689" />
+
 Penjelasan: 
 
-### Contoh Tabel Informasi Status Keseluruhan Kamar:
-=== INFORMASI STATUS KESELURUHAN KAMAR ===
-+----------+------+-----------+-----------+----------+-----------+
-| No Kamar | Tipe | Fasilitas |   Status  | Penghuni | Sisa Hari |
-+----------+------+-----------+-----------+----------+-----------+
-|    L1    |  L   |     AC    | Terpakai  | yurcell  |  30 Hari  |
-|    L2    |  L   |   Non-AC  | Tersedia  |    -     |     -     |
-|    P1    |  P   |     AC    | Tersedia  |    -     |     -     |
-+----------+------+-----------+-----------+----------+-----------+
+### Cek kamar yang sedang disewa
 
----
+<img width="435" height="258" alt="image" src="https://github.com/user-attachments/assets/36aa55f0-ffc2-4919-9b4a-464cdff1401e" />
+
+Penjelasan: karena caca adalah user atau penyewa baru, caca masih belum memiliki kamar 
+
+### Lihat dan isi saldo
+
+<img width="453" height="428" alt="image" src="https://github.com/user-attachments/assets/7b81192f-4c16-4d2e-b284-b8f94098059d" />
+
+Penjelasan: sebelum caca menyewa kamar, caca harus isi saldo terlebih dahulu.
+
+### Melihat kamar yang ingin disewa
+
+<img width="651" height="407" alt="image" src="https://github.com/user-attachments/assets/c3cc4321-6d5a-415f-a37f-bba9c43b1113" />
+
+Penjelasan:
+
+<img width="476" height="450" alt="image" src="https://github.com/user-attachments/assets/c7585865-27dd-44b6-b62e-aae03ada7a03" />
+
+Penjelasan: 
+
+<img width="492" height="332" alt="image" src="https://github.com/user-attachments/assets/2fd9903d-8786-4fe5-b927-625cbfaae9eb" />
+
+Penjelasan:
+
+<img width="492" height="332" alt="image" src="https://github.com/user-attachments/assets/8a9bfa18-1437-4e33-bd62-b9e5735ce3b5" />
+
+Penjelasan: 
 
 ## 8. Struktur File Database (JSON)
 
