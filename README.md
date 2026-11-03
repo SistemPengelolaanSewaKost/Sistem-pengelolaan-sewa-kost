@@ -160,7 +160,7 @@ Penjelasan: setelah melakukan registrasi, user disilahkan login dengan menginput
 
 <img width="402" height="215" alt="image" src="https://github.com/user-attachments/assets/c4bf3e19-d94c-4af4-926b-f88b2869d791" />
 
-Penjelasan:
+Penjelasan: setelah login berhasil, sistem akan menampilkan pilihan menu sebagai berikut: 1. cek info kamar sewaan 2. melihat dan mengisi saldo 3. memilih kamar yang ingin disewakan 4. memperpanjang sewa 5. logout
 
 #### Cek kamar yang sedang disewa
 
@@ -178,7 +178,7 @@ Penjelasan: sebelum caca menyewa kamar, caca harus isi saldo terlebih dahulu.
 
 <img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/93b5bb00-8567-4dd4-aea9-f07f132ecf3a" />
 
-Penjelasan:
+Penjelasan: 
 
 <img width="476" height="450" alt="image" src="https://github.com/user-attachments/assets/c7585865-27dd-44b6-b62e-aae03ada7a03" />
 
