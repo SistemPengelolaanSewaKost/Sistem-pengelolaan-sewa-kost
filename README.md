@@ -143,7 +143,7 @@ Penjelasan: sebelum caca menyewa kamar, caca harus isi saldo terlebih dahulu.
 
 ### Melihat kamar yang ingin disewa
 
-<img width="651" height="407" alt="image" src="https://github.com/user-attachments/assets/c3cc4321-6d5a-415f-a37f-bba9c43b1113" />
+<img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/93b5bb00-8567-4dd4-aea9-f07f132ecf3a" />
 
 Penjelasan:
 
@@ -177,6 +177,11 @@ Penjelasan:
 
 Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel
 
+## Ubah sisa hari sewa
+
+<img width="635" height="217" alt="image" src="https://github.com/user-attachments/assets/9e96bf38-62fe-497d-86d3-862e959554f3" />
+
+Penjelasan: 
 
 
 
