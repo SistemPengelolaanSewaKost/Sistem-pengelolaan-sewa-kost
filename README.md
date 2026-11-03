@@ -252,6 +252,18 @@ Penjelasan:
 
 ### 7.2.1. Def file json
 
+#### Pengalamatan file json
+
+<img width="194" height="110" alt="image" src="https://github.com/user-attachments/assets/80fb4508-dd26-4ce0-b797-0369fdd47eed" />
+
+Penjelasan: Disini kita akan memberikan nama untuk masing masing file json agar pengalamatan berhasil terbaca oleh main py kita.
+
+#### Def load json dan save json
+
+<img width="205" height="145" alt="image" src="https://github.com/user-attachments/assets/da46ba99-d0c1-4ea8-ae5c-e6e0650dc9ce" />
+
+Penjelasan: Pengecekan File (os.path.exists): Program mengecek apakah file JSON tersebut sudah ada atau belum dibuat lah umpamanya. Jika file belum ada (misal saat pertama kali aplikasi dijalankan), program akan otomatis membuat file baru dengan isi data bawaan (default_data). Penanganan Error (JSONDecodeError): Jika file JSON ternyata kosong atau rusak formatnya, program tidak akan crash, melainkan aman mengembalikan nilai default_data. Lalu untuk def save_json itu pokoknya untuk nyimpen data ke file json lah misal kita habis tambah kamar atau mungkin ngelakuin tranksaksi. Mode Tulis ('w'): Membuka file target dalam mode tulis (write), yang artinya data lama di dalam file akan ditimpa dengan data terbaru yang sudah diperbarui di dalam memori program.
+ 
 ### 7.2.2. Menu utama 
 
 ### 7.2.3. Def Menu Admin
