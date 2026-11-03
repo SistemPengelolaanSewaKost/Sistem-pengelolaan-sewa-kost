@@ -109,21 +109,23 @@ Keluar (Pilihan 3): Keluar dari program (END)
 
 ---
 
-## 7. Screenshot Output & Penjelasan 
+## 7. Screenshot Output & Code serta Penjelasan
 
-### 7.1 Tampilan menu utama
+## 7.1. Penjelasan output
+
+### 7.1.1. Tampilan menu utama
 
 <img width="443" height="178" alt="image" src="https://github.com/user-attachments/assets/96c58ec8-d041-4010-84c5-54772cb6feb0" />
 
 Penjelasan:
 
-### 7.1.1. Registrasi
+### 7.1.2. Registrasi
 
 <img width="432" height="95" alt="image" src="https://github.com/user-attachments/assets/1992f166-aa7b-490f-b13c-e876114fd2b3" />
 
 Penjelasan:
 
-### 7.1.2Login (sebagai user atau penyewa kos)
+### 7.1.3. Login (sebagai user atau penyewa kos)
 
 <img width="425" height="90" alt="image" src="https://github.com/user-attachments/assets/b47cd456-4e55-4328-a6a8-7060d86ac689" />
 
@@ -201,6 +203,15 @@ Penjelasan:
 
 Penjelasan: 
 
+## 7.2. Penjelasan kode
+
+### 7.2.1. Def file json
+
+### 7.2.2. Menu utama 
+
+### 7.2.3. Def Menu Admin
+
+### 7.2.4. Def Menu User
 
 
 ## 8. File (JSON)
