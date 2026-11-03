@@ -354,7 +354,67 @@ Penjelasan: Digunakan untuk membaca data kamar dari file rooms.json, mengurutkan
 
 ### 7.2.2. Menu utama 
 
+#### Def login
+
+<img width="418" height="335" alt="image" src="https://github.com/user-attachments/assets/ebce92c0-2616-43a9-8e55-6069181b3617" />
+
+Penjelasan: Mengelola sistem otentikasi masuk (login) bagi multi-role (Admin dan User) dengan batasan kesempatan mencoba untuk alasan keamanan. Lalu disitu kami pakai library pwinput supaya ketika kita input password akan dilambangkan dengan bintang *. Lalu untuk password kami pakai tipe data int, jadi password hanya berupa angka. Pengguna diberikan batas maksimal 3 kali percobaan salah sebelum akses dikunci.
+
+#### Def Registrasi
+
+<img width="319" height="272" alt="image" src="https://github.com/user-attachments/assets/b972df07-3150-4327-9c26-8434ad11eef2" />
+
+Penjelasan: pendaftaran akun baru bagi pengguna (user) ke dalam sistem. Mengecek ke file users.json apakah username tersebut sudah pernah terdaftar sebelumnya untuk mencegah duplikasi akun. Jika aman, data akun baru dibuat dengan peran bawaan (role: "user") dan saldo awal bernilai 0, lalu disimpan secara permanen menggunakan save_json.
+
+#### Def Main
+
+<img width="248" height="265" alt="image" src="https://github.com/user-attachments/assets/11d09de2-ec47-47ee-90bb-f9fc5c3f5ee3" />
+
+Penjelasan: Disini kita pakai os clear supaya tampilan dari terminal itu bersih. Lalu menggunakan perulangan while True yang menjadi perulangan utama dari sistem kami
+
 ### 7.2.3. Def Menu Admin
+
+#### Def tambah_kamar
+
+<img width="410" height="289" alt="image" src="https://github.com/user-attachments/assets/71c21428-11f8-4907-9410-4e4342b591c8" />
+<img width="287" height="250" alt="image" src="https://github.com/user-attachments/assets/e8cc272c-dd6e-4032-9354-f7b2fd8453a4" />
+
+Penjelasan: Digunakan oleh admin untuk menambahkan unit kamar kos baru ke dalam sistem secara interaktif dengan penomoran otomatis dan validasi input yang aman. Sistem menyaring kamar berdasarkan tipenya, mencari nomor urut angka terbesar yang sudah ada, lalu secara otomatis menaikkan angkanya (misal: jika kamar L terakhir adalah L3, maka otomatis dibuatkan L4). Menyusun data kamar baru ke dalam struktur dictionary (dengan status awal belum terpakai/False, belum ada penghuni, dan sisa hari 0), lalu menyimpannya secara permanen ke file rooms.json menggunakan fungsi save_json.
+
+#### Def Admin_Pengecekan_kamar
+
+<img width="431" height="311" alt="image" src="https://github.com/user-attachments/assets/11d94bd4-d1f1-4a9e-bd47-4f94bb5d3f56" />
+<img width="409" height="305" alt="image" src="https://github.com/user-attachments/assets/a65d27f6-0ad1-4200-8551-c211a3e25fae" />
+
+Penjelasan: Digunakan oleh admin untuk mengelola status operasional kamar kos secara berkala, yang meliputi pengubahan sisa masa sewa penghuni dan validasi proses checkout kamar. Memanggil fungsi tampilkan_tabel_kamar(). Pakai while true untuk perulangan dari sub menu di kelola kamar. Mengubah nilai sisa_hari sesuai input angka admin, lalu langsung memperbarui file rooms.json. Mengubah status kamar menjadi kosong (terpakai = False), menghapus data penghuni (penghuni = None), mereset sisa hari menjadi 0, dan menyimpan perubahannya
+
+#### Def menu
+
+<img width="422" height="341" alt="image" src="https://github.com/user-attachments/assets/97bb0f4b-4784-4c3a-ac7d-bc30427e7d17" />
+
+Penjelasan: Digunakan oleh admin untuk memantau total saldo keuangan kos secara real-time serta mencatat transaksi pengeluaran operasional (seperti pembayaran tagihan). Pakai while True untuk perulangan dari sub menu nya. Memuat seluruh data transaksi dari file transactions.json, lalu menjumlahkan total seluruh transaksi yang bertipe "pemasukan" dan menguranginya dengan total transaksi bertipe "pengeluaran" untuk mendapatkan nominal saldo akhir yang akurat
+
+#### Def Menu_Hapus_akun
+
+<img width="416" height="299" alt="image" src="https://github.com/user-attachments/assets/c8853a0d-2512-4b60-9581-325a15cd2ddd" />
+
+<img width="433" height="302" alt="image" src="https://github.com/user-attachments/assets/9aa1f439-ef93-48f3-bbd8-094f57763a53" />
+
+<img width="428" height="168" alt="image" src="https://github.com/user-attachments/assets/a65e7cb7-20e1-4c1c-a00c-ebe12e9d5b43" />
+
+Penjelasan: Memuat data dari users.json dan menyaring akun agar hanya menampilkan daftar pengguna umum (user), sehingga akun admin utama terlindungi. Tabel Status Pelanggan (PrettyTable): Menampilkan daftar akun lengkap dengan informasi saldo tersisa, status kamar aktif, serta keterangan kelayakan apakah akun tersebut sudah bisa dihapus atau belum. if user['saldo'] > 0 or kamar_aktif itu untuk Mencegah penghapusan akun jika pelanggan yang bersangkutan masih memiliki sisa saldo aktif di dompet digitalnya atau masih tercatat menghuni kamar kos (wajib bersyarat saldo 0 dan sudah checkout).
+
+#### Def menu_laporan_tranksaksi
+
+<img width="409" height="316" alt="image" src="https://github.com/user-attachments/assets/0a630de5-dba3-4383-b81d-45566d5f56c1" />
+
+Penjelasan: Digunakan oleh admin untuk memantau, merekap, dan mencari riwayat laporan arus keuangan (transaksi masuk dan keluar) yang tersimpan di dalam sistem. Memuat seluruh data transaksi secara otomatis dari file transactions.json menggunakan fungsi load_json. Opsi 1 (Seluruh Transaksi): Menampilkan seluruh riwayat arus kas ke dalam tabel terminal yang rapi menggunakan PrettyTable lengkap dengan informasi username, tipe transaksi, keterangan, dan nominal uangnya.   Opsi 2 (Pencarian Berdasarkan Username): Melakukan penyaringan data transaksi berdasarkan nama pengguna (username) yang diinputkan oleh admin, sehingga riwayat pembayaran dari penghuni tertentu bisa dilacak dengan mudah dan cepat.
+
+#### Def Menu_admin
+
+<img width="267" height="298" alt="image" src="https://github.com/user-attachments/assets/422e327a-f68d-4512-8698-2b4f24ae4eac" />
+
+Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan utama di menu admin, lalu menggunakan logika if elif else. Lalu kita tinggal memanggil setiap fungsi/def yang telah kita buat sebelumnya.
 
 ### 7.2.4. Def Menu User
 
