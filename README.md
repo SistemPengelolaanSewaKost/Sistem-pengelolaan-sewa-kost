@@ -490,6 +490,9 @@ Pilihan durasi dicocokkan dengan durasi_mapping yang berisi kunci harga, jumlah 
 
 Penjelasan: Bagian ini menutup fungsi menu_user_perpanjang_sewa. Setelah saldo dipotong dan sisa hari ditambah, save_json() menyimpan data pengguna dan kamar ke file JSON agar perubahan permanen. Lalu catat_transaksi() mencatat perpanjangan sebagai pemasukan, lengkap dengan nomor kamar dan durasi, dan program menampilkan pesan berhasil beserta sisa hari terbaru. Jika pengguna tidak menjawab ‘y’ pada konfirmasi, else menampilkan “Perpanjangan sewa dibatalkan”.
 
+
+####  Def Menu_user
+
 <img width="838" height="691" alt="image" src="https://github.com/user-attachments/assets/2267e107-bf8b-41f0-ab24-36bf957b17b2" />
 
 Penjelasan: Fungsi main_user_menu(username) menampilkan menu utama bagi pengguna yang sudah login. Program menyapa pengguna lewat f-string, lalu while True menjaga menu tetap muncul sampai pengguna logout. Di dalamnya, program mencetak lima pilihan menu dan meminta input angka 1-5 yang disimpan di pilihan.
