@@ -367,8 +367,6 @@ Penjelasan: Digunakan oleh admin untuk memantau, merekap, dan mencari riwayat la
 
 Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan utama di menu admin, lalu menggunakan logika if elif else. Lalu kita tinggal memanggil setiap fungsi/def yang telah kita buat sebelumnya.
 
-### 7.2.3. Def Menu Admin
-
 ### 7.2.4. Def Menu User
 
 
