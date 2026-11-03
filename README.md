@@ -111,37 +111,37 @@ Keluar (Pilihan 3): Keluar dari program (END)
 
 ## 7. Screenshot Output & Penjelasan 
 
-### Tampilan menu utama
+### 7.1 Tampilan menu utama
 
 <img width="443" height="178" alt="image" src="https://github.com/user-attachments/assets/96c58ec8-d041-4010-84c5-54772cb6feb0" />
 
 Penjelasan:
 
-### Registrasi
+### 7.1.1. Registrasi
 
 <img width="432" height="95" alt="image" src="https://github.com/user-attachments/assets/1992f166-aa7b-490f-b13c-e876114fd2b3" />
 
 Penjelasan:
 
-### Login (sebagai user atau penyewa kos)
+### 7.1.2Login (sebagai user atau penyewa kos)
 
 <img width="425" height="90" alt="image" src="https://github.com/user-attachments/assets/b47cd456-4e55-4328-a6a8-7060d86ac689" />
 
 Penjelasan: 
 
-### Cek kamar yang sedang disewa
+#### Cek kamar yang sedang disewa
 
 <img width="435" height="258" alt="image" src="https://github.com/user-attachments/assets/36aa55f0-ffc2-4919-9b4a-464cdff1401e" />
 
 Penjelasan: karena caca adalah user atau penyewa baru, caca masih belum memiliki kamar 
 
-### Lihat dan isi saldo
+#### Lihat dan isi saldo
 
 <img width="453" height="428" alt="image" src="https://github.com/user-attachments/assets/7b81192f-4c16-4d2e-b284-b8f94098059d" />
 
 Penjelasan: sebelum caca menyewa kamar, caca harus isi saldo terlebih dahulu.
 
-### Melihat kamar yang ingin disewa
+#### Melihat kamar yang ingin disewa
 
 <img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/93b5bb00-8567-4dd4-aea9-f07f132ecf3a" />
 
@@ -155,7 +155,7 @@ Penjelasan:
 
 Penjelasan:
 
-### Perpanjangan sewa
+#### Perpanjangan sewa
 
 <img width="562" height="266" alt="image" src="https://github.com/user-attachments/assets/1f24317b-4113-44d4-8e71-89b7fd14fd77" />
 
@@ -165,13 +165,13 @@ Penjelasan:
 
 Penjelasan:
 
-### Login (sebagai admin atau pemilik kos)
+### 7.1.3 Login (sebagai admin atau pemilik kos)
 
 <img width="426" height="81" alt="image" src="https://github.com/user-attachments/assets/8206443d-4afc-4027-8b28-64500d0f6e50" />
 
 Penjelasan:
 
-### Kelola kamar
+#### Kelola kamar
 
 <img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/68551250-b33c-4a7e-b206-2c40d9680e22" />
 
@@ -189,13 +189,13 @@ Penjelasan:
 
 Penjelasan: 
 
-### Tambah kamar
+#### Tambah kamar
 
 <img width="576" height="131" alt="image" src="https://github.com/user-attachments/assets/b886c72c-78b5-4177-942b-0485dd27d9e5" />
 
 Penjelasan: 
 
-### Lihat saldo 
+#### Lihat saldo 
 
 <img width="445" height="167" alt="image" src="https://github.com/user-attachments/assets/7c7b1e7f-d31d-449a-a2ff-256a473d4ba4" />
 
