@@ -213,21 +213,8 @@ Sistem menggunakan 4 file JSON lokal sebagai media penyimpanan data:
 
 ---
 
-## 9. Cara Menjalankan Program
 
-1. Clone Repositori ini:
-   `git clone https://github.com/USERNAME/Sewa-Kost-In.git`
-   `cd Sewa-Kost-In`
-
-2. Install Dependensi Tambahan:
-   `pip install prettytable pwinput`
-
-3. Jalankan Aplikasi:
-   `python main.py`
-
----
-
-## 10. Kesimpulan & Saran
+## 9. Kesimpulan & Saran
 
 ### Kesimpulan
 Aplikasi Sewa Kost In berhasil menyelesaikan permasalahan pencatatan manual sewa kost. Fitur pembagian role, integrasi saldo, transaksi sewa otomatis, serta sistem penyimpanan file JSON memastikan seluruh data transaksi dan kamar terorganisir dengan akurat.
@@ -238,7 +225,7 @@ Aplikasi Sewa Kost In berhasil menyelesaikan permasalahan pencatatan manual sewa
 
 ---
 
-## 11. Penjelasan Detail Fungsi & Struktur Kode (Code Breakdown)
+## 10. Penjelasan Detail Fungsi & Struktur Kode (Code Breakdown)
 
 Setiap fungsi dalam kode program dirancang modular untuk menangani tugas spesifik:
 
@@ -268,7 +255,7 @@ Setiap fungsi dalam kode program dirancang modular untuk menangani tugas spesifi
 
 ---
 
-## 12. Penanganan Error & Keamanan Input (Error Handling)
+## 11. Penanganan Error & Keamanan Input (Error Handling)
 
 Untuk mencegah program *crash* saat dijalankan oleh pengguna, beberapa mekanisme penanganan error telah diterapkan:
 * **Value Error Handling:** Menggunakan blok `try-except ValueError` pada setiap input angka (seperti masukan password, nominal saldo, dan pilihan menu) agar sistem tidak berhenti jika pengguna memasukkan karakter non-angka.
