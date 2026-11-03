@@ -100,21 +100,13 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 ---
 
-## 7. Output Terminal & Penjelasan Kode
+## 7. Screenshot Output & Penjelasan Kode
 
-### Contoh Tampilan Struk / Invoice Transaksi di Terminal:
-=============================================
-             TRANSAKSI / INVOICE             
-=============================================
- ID Transaksi : TRX001
- Waktu        : 2026-10-29 10:15:30
- Username     : yurcell
- Tipe         : Pemasukan
- Keterangan   : Sewa kamar L1 (1 Bulan)
- Jumlah       : Rp 800,000
-=============================================
- Terima kasih telah menggunakan sistem!
-=============================================
+### Tampilan menu utama
+
+<img width="443" height="178" alt="image" src="https://github.com/user-attachments/assets/96c58ec8-d041-4010-84c5-54772cb6feb0" />
+
+
 
 ### Contoh Tabel Informasi Status Keseluruhan Kamar:
 === INFORMASI STATUS KESELURUHAN KAMAR ===
