@@ -1,39 +1,5 @@
 [
     {
-        "id_transaksi": "TRX003",
-        "waktu": "2026-10-24 21:28:21",
-        "username": "rena",
-        "tipe": "pemasukan",
-        "keterangan": "Sewa kamar P1 (1 Tahun)",
-        "jumlah": 11000000
-    },
-    {
-        "username": "dimas",
-        "tipe": "pemasukan",
-        "keterangan": "Isi Saldo User",
-        "jumlah": 5000000
-    },
-    {
-        "username": "rena",
-        "tipe": "pemasukan",
-        "keterangan": "Isi Saldo User",
-        "jumlah": 4000000
-    },
-    {
-        "id_transaksi": "TRX001",
-        "waktu": "2026-10-25 14:04:29",
-        "username": "rena",
-        "tipe": "pemasukan",
-        "keterangan": "Sewa kamar P1 (1 Bulan)",
-        "jumlah": 1000000
-    },
-    {
-        "username": "admin",
-        "tipe": "pengeluaran",
-        "keterangan": "pembayaran listrik",
-        "jumlah": 6000000
-    },
-    {
         "id_transaksi": "KBMFT001",
         "waktu": "2026-11-02 20:17:58",
         "username": "dimas",
