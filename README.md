@@ -324,7 +324,7 @@ Sistem menggunakan 4 file JSON lokal sebagai media penyimpanan data:
 ## 9. Kesimpulan & Saran
 
 ### Kesimpulan
-Aplikasi Sewa Kost In berhasil menyelesaikan permasalahan pencatatan manual sewa kost. Fitur pembagian role, integrasi saldo, transaksi sewa otomatis, serta sistem penyimpanan file JSON memastikan seluruh data transaksi dan kamar terorganisir dengan akurat.
+Program Sewa Kost In berhasil menyelesaikan permasalahan pencatatan manual sewa kost. Fitur pembagian role, integrasi saldo, transaksi sewa otomatis, serta sistem penyimpanan file JSON memastikan seluruh data transaksi dan kamar aman dengan akurat.
 
 ### Saran
 * Penambahan enkripsi kata sandi (misal: hashing dengan hashlib).
