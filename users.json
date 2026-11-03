@@ -1,0 +1,38 @@
+[
+    {
+        "username": "admin",
+        "password": 123,
+        "role": "admin",
+        "saldo": 0
+    },
+    {
+        "username": "dimas",
+        "password": 123,
+        "role": "user",
+        "saldo": 2206000
+    },
+    {
+        "username": "rena",
+        "password": 111,
+        "role": "user",
+        "saldo": 3000000
+    },
+    {
+        "username": "dimaskbmft",
+        "password": 222,
+        "role": "user",
+        "saldo": 9997999999
+    },
+    {
+        "username": "momo",
+        "password": 123,
+        "role": "user",
+        "saldo": 56900000
+    },
+    {
+        "username": "fufufafa",
+        "password": 2233,
+        "role": "user",
+        "saldo": 654943000
+    }
+]

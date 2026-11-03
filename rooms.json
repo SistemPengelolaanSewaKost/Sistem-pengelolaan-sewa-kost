@@ -1,0 +1,98 @@
+[
+    {
+        "no_kamar": "L1",
+        "tipe": "L",
+        "ac": true,
+        "terpakai": true,
+        "penghuni": "dimas",
+        "sisa_hari": 34
+    },
+    {
+        "no_kamar": "L2",
+        "tipe": "L",
+        "ac": false,
+        "terpakai": true,
+        "penghuni": null,
+        "sisa_hari": 30
+    },
+    {
+        "no_kamar": "L3",
+        "tipe": "L",
+        "ac": true,
+        "terpakai": true,
+        "penghuni": "dimaskbmft",
+        "sisa_hari": 30
+    },
+    {
+        "no_kamar": "L4",
+        "tipe": "L",
+        "ac": true,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "L5",
+        "tipe": "L",
+        "ac": false,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "L6",
+        "tipe": "L",
+        "ac": false,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "L7",
+        "tipe": "L",
+        "ac": false,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "P1",
+        "tipe": "P",
+        "ac": true,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "P2",
+        "tipe": "P",
+        "ac": false,
+        "terpakai": true,
+        "penghuni": "fufufafa",
+        "sisa_hari": 30
+    },
+    {
+        "no_kamar": "P3",
+        "tipe": "P",
+        "ac": true,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "P4",
+        "tipe": "P",
+        "ac": true,
+        "terpakai": false,
+        "penghuni": null,
+        "sisa_hari": 0
+    },
+    {
+        "no_kamar": "P5",
+        "tipe": "P",
+        "ac": true,
+        "terpakai": true,
+        "penghuni": "momo",
+        "sisa_hari": 395
+    }
+]

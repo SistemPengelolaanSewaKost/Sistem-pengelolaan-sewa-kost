@@ -1,0 +1,132 @@
+[
+    {
+        "id_transaksi": "TRX003",
+        "waktu": "2026-10-24 21:28:21",
+        "username": "rena",
+        "tipe": "pemasukan",
+        "keterangan": "Sewa kamar P1 (1 Tahun)",
+        "jumlah": 11000000
+    },
+    {
+        "username": "dimas",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 5000000
+    },
+    {
+        "username": "rena",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 4000000
+    },
+    {
+        "id_transaksi": "TRX001",
+        "waktu": "2026-10-25 14:04:29",
+        "username": "rena",
+        "tipe": "pemasukan",
+        "keterangan": "Sewa kamar P1 (1 Bulan)",
+        "jumlah": 1000000
+    },
+    {
+        "username": "admin",
+        "tipe": "pengeluaran",
+        "keterangan": "pembayaran listrik",
+        "jumlah": 6000000
+    },
+    {
+        "id_transaksi": "KBMFT001",
+        "waktu": "2026-11-02 20:17:58",
+        "username": "dimas",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 3000
+    },
+    {
+        "id_transaksi": "KBMFT002",
+        "waktu": "2026-11-02 20:19:31",
+        "username": "dimas",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 3000
+    },
+    {
+        "id_transaksi": "KBMFT003",
+        "waktu": "2026-11-02 20:23:30",
+        "username": "dimaskbmft",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 9999999999
+    },
+    {
+        "id_transaksi": "KBMFT004",
+        "waktu": "2026-11-02 22:16:40",
+        "username": "dimaskbmft",
+        "tipe": "pemasukan",
+        "keterangan": "Sewa kamar L3 (1 Bulan)",
+        "jumlah": 1000000
+    },
+    {
+        "id_transaksi": "KBMFT005",
+        "waktu": "2026-11-02 22:18:17",
+        "username": "dimaskbmft",
+        "tipe": "pemasukan",
+        "keterangan": "Sewa kamar L3 (1 Bulan)",
+        "jumlah": 1000000
+    },
+    {
+        "id_transaksi": "KBMFT006",
+        "waktu": "2026-11-02 23:08:52",
+        "username": "admin",
+        "tipe": "pengeluaran",
+        "keterangan": "listrik",
+        "jumlah": 890000
+    },
+    {
+        "id_transaksi": "KBMFT007",
+        "waktu": "2026-11-02 23:14:14",
+        "username": "momo",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 68900000
+    },
+    {
+        "id_transaksi": "KBMFT008",
+        "waktu": "2026-11-02 23:14:59",
+        "username": "momo",
+        "tipe": "pemasukan",
+        "keterangan": "Sewa kamar P5 (1 Tahun)",
+        "jumlah": 11000000
+    },
+    {
+        "id_transaksi": "KBMFT009",
+        "waktu": "2026-11-02 23:16:05",
+        "username": "momo",
+        "tipe": "pemasukan",
+        "keterangan": "Perpanjangan sewa kamar P5 (1 Bulan)",
+        "jumlah": 1000000
+    },
+    {
+        "id_transaksi": "KBMFT010",
+        "waktu": "2026-11-03 17:31:36",
+        "username": "fufufafa",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 654443000
+    },
+    {
+        "id_transaksi": "KBMFT011",
+        "waktu": "2026-11-03 17:31:55",
+        "username": "fufufafa",
+        "tipe": "pemasukan",
+        "keterangan": "Isi Saldo User",
+        "jumlah": 1200000
+    },
+    {
+        "id_transaksi": "KBMFT012",
+        "waktu": "2026-11-03 17:34:40",
+        "username": "fufufafa",
+        "tipe": "pemasukan",
+        "keterangan": "Sewa kamar P2 (1 Bulan)",
+        "jumlah": 700000
+    }
+]
