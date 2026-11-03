@@ -260,7 +260,7 @@ Penjelasan:
 
 ## 7.2. Penjelasan kode
 
-### 7.2.1. Def file json
+### 7.2.1. Def file untuk penunjang file json dan penunjang def yang general
 
 #### Pengalamatan file json
 
@@ -273,7 +273,21 @@ Penjelasan: Disini kita akan memberikan nama untuk masing masing file json agar 
 <img width="205" height="145" alt="image" src="https://github.com/user-attachments/assets/da46ba99-d0c1-4ea8-ae5c-e6e0650dc9ce" />
 
 Penjelasan: Pengecekan File (os.path.exists): Program mengecek apakah file JSON tersebut sudah ada atau belum dibuat lah umpamanya. Jika file belum ada (misal saat pertama kali aplikasi dijalankan), program akan otomatis membuat file baru dengan isi data bawaan (default_data). Penanganan Error (JSONDecodeError): Jika file JSON ternyata kosong atau rusak formatnya, program tidak akan crash, melainkan aman mengembalikan nilai default_data. Lalu untuk def save_json itu pokoknya untuk nyimpen data ke file json lah misal kita habis tambah kamar atau mungkin ngelakuin tranksaksi. Mode Tulis ('w'): Membuka file target dalam mode tulis (write), yang artinya data lama di dalam file akan ditimpa dengan data terbaru yang sudah diperbarui di dalam memori program.
- 
+
+#### Def Catat Tranksaksi
+
+<img width="372" height="260" alt="image" src="https://github.com/user-attachments/assets/6c1a3712-b8e6-409d-90d7-4bb8b0380fa9" />
+
+<img width="253" height="137" alt="image" src="https://github.com/user-attachments/assets/3a2b68e1-709e-4e57-bd7e-61dbf0357a86" />
+
+Penjelasan: Digunakan sebagai sistem "invoice berjalan" otomatis untuk merekam, membuat ID unik, menyimpan riwayat keuangan ke file transactions.json, sekaligus mencetak bukti transaksi (struk/invoice) secara real-time di terminal setiap kali ada aktivitas pembayaran. terus ada pembuatan id unik pakai kbmft lalu pakai penomoran otomatis. Terus kami pakai datetime untuk menunjukkan waktu tranksaksi aktif lah umpamanya. 
+
+#### Def tampilkan tabel kamar
+
+<img width="370" height="167" alt="image" src="https://github.com/user-attachments/assets/426fabde-f760-479d-8279-76f0357ae3f5" />
+
+Penjelasan: Digunakan untuk membaca data kamar dari file rooms.json, mengurutkannya secara teratur, lalu menampilkan informasi status seluruh kamar kos ke dalam bentuk tabel terminal yang rapi menggunakan library PrettyTable. Mengembalikan Nilai (return rooms): Mengembalikan data kamar yang sudah dimuat agar bisa langsung digunakan kembali oleh fungsi lain (seperti menu pengecekan admin atau penyewaan user).
+
 ### 7.2.2. Menu utama 
 
 ### 7.2.3. Def Menu Admin
