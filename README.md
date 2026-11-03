@@ -203,6 +203,36 @@ Penjelasan:
 
 Penjelasan: 
 
+### Pembayaran tagihan
+
+<img width="436" height="386" alt="image" src="https://github.com/user-attachments/assets/8f198921-e650-41c0-b655-705976420aac" />
+
+Penjelasan: 
+
+### Hapus akun
+
+<img width="787" height="388" alt="image" src="https://github.com/user-attachments/assets/7581ab1b-63f9-49dd-9efd-503d472c25bf" />
+
+Penjelasan: syarat admin bisa menghapus akun user adalah jika akun user tersebut tidak memiliki saaldo atau saldo Rp 0. Karena user rena masih memiliki saldo sebesar 3jt maka akun tidak bisa di hapus
+
+### Laporan transaksi
+
+<img width="341" height="63" alt="image" src="https://github.com/user-attachments/assets/766280f8-63ba-4917-829a-d516672ce840" />
+
+Penjelasan:
+
+#### Lihat seluruh transaksi
+
+<img width="797" height="588" alt="image" src="https://github.com/user-attachments/assets/67d7944b-c26e-41cb-b5dc-57de0e48dd27" />
+
+Penjelasan:
+
+#### Lihat transaksi berdasarkan username
+
+<img width="797" height="588" alt="image" src="https://github.com/user-attachments/assets/7d1120b9-88a8-4f55-975b-af77fa07ed67" />
+
+Penjelasan:
+
 ## 7.2. Penjelasan kode
 
 ### 7.2.1. Def file json
