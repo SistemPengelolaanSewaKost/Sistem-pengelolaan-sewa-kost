@@ -73,7 +73,8 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 <img width="1812" height="1032" alt="flowchart terbaru-Page-1 drawio" src="https://github.com/user-attachments/assets/114feae3-4faf-4c50-9b15-65a901ab2a04" />
 
-Ketika program pertama kali dijalankan * `(START)`, pengguna akan dihadapkan pada Tampilan Utama dengan tiga pilihan menu: Login, Registrasi, atau Keluar.
+
+Ketika program pertama kali dijalankan * `(START)`, pengguna akan di tampilkan menu Utama dengan tiga pilihan menu: Login, Registrasi, atau Keluar.
 
 * `Proses Registrasi (Pilihan 2)`: Pengguna memasukkan username dan password baru lalu sistem langsung melakukan pengecekan ke file users.json untuk melihat apakah username tersebut sudah dipakai atau belum. Jika terdeteksi duplikat atau udah ada, sistem akan meminta pengguna untuk melakukan login ulang. Jika username belum ada, data akun baru disimpan ke users.json dan pengguna diarahkan kembali ke menu awal.
 
@@ -81,13 +82,14 @@ Ketika program pertama kali dijalankan * `(START)`, pengguna akan dihadapkan pad
 Jika Login Gagal: Sistem memberikan batasan percobaan sebanyak 3 kali. Setiap kali gagal, kuota percobaan berkurang 1. Jika kesempatan habis (sisa == 0), sistem memberikan opsi apakah pengguna ingin kembali ke menu utama atau memilih keluar dari program.
 
 * `Jika Login Berhasil`: Sistem mengecek role dari akun tersebut. Akun ber-role Admin akan masuk ke Menu Admin, sedangkan akun ber-role User akan masuk ke Menu User.
-Keluar (Pilihan 3): Keluar dari program (END)
+
+* `Keluar (Pilihan 3)`: Keluar dari program (END)
 
 
 <img width="4812" height="1622" alt="flowchart terbaru-Halaman-2 drawio" src="https://github.com/user-attachments/assets/b21da00a-c56a-429c-8b79-0e7e83815cd7" />
 
 
-* `Kelola Kamar`: Admin dapat melihat status seluruh kamar (tersedia maupun terpakai). Di dalam sub-menu ini, Admin bisa memilih dua tindakan:
+* `Kelola Kamar`: Admin dapat melihat status seluruh kamar (tersedia maupun yang sudah terpakai). Di dalam sub menu ini, Admin bisa memilih dua tindakan:
 
 * `Ubah sisa hari`: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu Admin menginput sisa hari penyewaan yang baru sebelum disimpan ke file JSON.
 
@@ -104,15 +106,16 @@ Keluar (Pilihan 3): Keluar dari program (END)
 
 <img width="2022" height="1947" alt="flowchart terbaru-Halaman-3 drawio (1)" src="https://github.com/user-attachments/assets/f4119078-2a09-4162-b8c6-7c25d58126d7" />
 
-* `Cek Info Kamar Sewaan`: Sistem mengecek apakah akun pengguna memiliki kamar yang sedang disewa. Jika ada, sistem akan menampilkan sisa masa sewa dan sisa hari penyewaannya.
+
+* `Cek Info Kamar Sewaan`: program mengecek apakah akun pengguna memiliki kamar yang sedang disewa. Jika ada, sistem akan menampilkan sisa masa sewa dan sisa hari penyewaannya.
 
 * `Melihat dan Mengisi Saldo`: Pengguna dapat melihat sisa saldo akun saat ini. Jika memilih untuk mengisi saldo, pengguna menginput nominal yang diinginkan, sistem menambah saldo, dan secara otomatis mencetak invoice transaksi.
 
 * `Memilih Kamar yang Ingin Disewa`: Pengguna melihat daftar kamar tersedia, memilih tipe kamar (L atau P), menentukan nomor kamar, melihat daftar harga, lalu memilih durasi sewa. Sebelum memproses, sistem mengecek kecukupan saldo pengguna. Jika saldo cukup dan pengguna mengonfirmasi, transaksi diproses dan disimpan ke file JSON.
 
-* `Memperpanjang Sewa`: Sistem memastikan pengguna sudah memiliki kamar sewaan. Jika punya, pengguna memasukkan durasi perpanjangan sewa. Jika saldo mencukupi, sistem memperbarui data sewa di file JSON dan mencetak invoice baru.
+* `Memperpanjang Sewa`: Program memastikan pengguna sudah memiliki kamar sewaan. Jika punya, pengguna memasukkan durasi perpanjangan sewa. Jika saldo mencukupi, program memperbarui data sewa di file JSON dan mencetak invoice baru.
 
-* `Logout`: Pengguna keluar dari sesi akun dan dikembalikan ke Tampilan Utama.
+* `Logout`: Pengguna keluar dari akun dan dikembalikan ke Tampilan Utama.
 
 
 ---
