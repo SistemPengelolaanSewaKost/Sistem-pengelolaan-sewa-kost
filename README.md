@@ -36,7 +36,7 @@ Pencarian dan penyewaan kamar kost di sekitar lingkungan kampus masih banyak dil
 Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakukan di buku catatan terpisah sehingga rawan terjadi error, data tidak diperbarui, pembayaran terlewat, atau bukti transaksi hilang.
 
 ### Rumusan Masalah
-1. Bagaimana merancang aplikasi Sewa Kost In dengan fitur registrasi, login, dan pembagian hak akses (Admin vs Penyewa)?
+1. Bagaimana merancang program Sewa Kost In dengan fitur registrasi, login, dan pembagian hak akses (Admin dan Penyewa)?
 2. Bagaimana menerapkan fungsi CRUD (Create, Read, Update, Delete) untuk mengelola data kost dan kamar?
 3. Bagaimana merancang alur penyewaan kamar (pemilihan kamar, periode sewa, top-up saldo, hingga pembayaran)?
 4. Bagaimana mengelola transaksi, pencatatan tagihan, dan cetak invoice secara akurat?
@@ -44,24 +44,24 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 ### Batasan Masalah
 * Hanya memiliki 2 role pengguna: Admin (Pemilik Kost) dan User (Penyewa).
-* Pembayaran dilakukan menggunakan saldo internal aplikasi (simulasi top-up), tidak terhubung ke payment gateway asli.
-* Penyimpanan data menggunakan file lokal berformat JSON (users.json, rooms.json, transactions.json, prices.json).
+* Pembayaran dilakukan menggunakan saldo internal program (simulasi top-up), tidak terhubung ke payment gateway asli.
+* Penyimpanan data menggunakan file berformat JSON (users.json, rooms.json, transactions.json, prices.json).
 
 ### Tujuan Proyek
-* Membangun sistem otentikasi login & registrasi terstruktur.
+* Membangun program otentikasi login & registrasi terstruktur.
 * Mengimplementasikan konsep CRUD penuh pada pengelolaan unit kamar.
 * Menyediakan fitur transaksi otomatis (potong saldo, perpanjang sewa, dan pencetakan invoice transaksi secara otomatis).
 * Memastikan seluruh perubahan data tersimpan dengan aman pada file JSON.
 
 ### Manfaat Proyek
-* **Bagi Pemilik Kost:** Memudahkan pencatatan data kamar, memantau pengeluaran/pemasukan, dan mencegah kesalahan data penyewa.
-* **Bagi Penyewa:** Memudahkan pengecekan kamar kosong, memilih durasi sewa transparan, serta mendapatkan bukti transaksi (invoice).
+* **Bagi Pemilik Kost:** Memudahkan pencatatan data kamar, memantau pengeluaran atau pemasukan, dan mencegah kesalahan data penyewa.
+* **Bagi Penyewa:** Memudahkan pengecekan kamar kosong, memilih durasi sewa, serta mendapatkan bukti transaksi (invoice).
 
 ---
 
 ## 4. Library Python
 
-* `json`: Membaca dan menyimpan database user atau admin dalam format JSON.
+* `json`: Membaca dan menyimpan data user atau admin dalam format JSON.
 * `os`: Membersihkan tampilan layar terminal agar terminal rapi.
 * `pwinput`: Menyembunyikan input password dengan karakter (***).
 * `prettytable`: Menampilkan data berbentuk tabel yang rapi di terminal.
@@ -124,7 +124,7 @@ Jika Login Gagal: Sistem memberikan batasan percobaan sebanyak 3 kali. Setiap ka
 
 ### A. Hak Akses Admin (Pemilik Kost)
 1. **Kelola Kamar (CRUD):** Mengubah sisa hari sewa penyewa secara manual dan melakukan validasi check-out kamar.
-2. **Tambah Unit Kamar:** Penambahan nomor kamar otomatis (misal: L1, L2 untuk Laki-Laki / P1, P2 untuk Perempuan) beserta konfigurasi fasilitas (AC / Non-AC).
+2. **Tambah Unit Kamar:** Penambahan nomor kamar otomatis (misal: L1, L2 untuk Laki-Laki / P1, P2 untuk Perempuan) beserta fasilitas (AC / Non-AC).
 3. **Lihat & Kelola Saldo Kas:** Menampilkan rekapitulasi total pemasukan dan pengeluaran serta mencatat pengeluaran operasional kost.
 4. **Hapus Akun Penyewa:** Validasi ketat bahwa akun penyewa hanya bisa dihapus jika saldo bernilai 0 dan status sewa sudah check-out.
 5. **Laporan Transaksi:** Melihat seluruh histori transaksi keuangan dan mencari riwayat transaksi berdasarkan username penyewa.
@@ -137,9 +137,11 @@ Jika Login Gagal: Sistem memberikan batasan percobaan sebanyak 3 kali. Setiap ka
 
 ---
 
+
 ## 7. Screenshot Output & Code serta Penjelasan
 
 ## 7.1. Penjelasan output
+
 
 ### 7.1.1. Tampilan menu utama
 
@@ -149,6 +151,7 @@ Penjelasan: saat program dijalankan, sistem akan menampilkan menu utama dengan t
 1. Login
 2. Registrasi
 3. Keluar 
+
 
 ### 7.1.2. Registrasi
 
@@ -310,6 +313,7 @@ Penjelasan: pemilik kos dapat melihat seluruh transaksi dengan 2 pilihan menu ya
 
 Penjelasan: jika pemilik kos memilih menu 1 maka sistem akan menampilkan tabel seluruh transaksi 
 
+
 #### Lihat transaksi berdasarkan username
 
 <img width="642" height="228" alt="image" src="https://github.com/user-attachments/assets/ce6d9247-af3c-4503-b402-99f0ab28d3db" />
@@ -318,7 +322,6 @@ Penjelasan: jika pemilik kos memilih menu 2 maka sistem meminta untuk menginputk
 
 
 ## 7.2. Penjelasan kode
-
 
 ### 7.2.1. Def file untuk penunjang file json dan penunjang def yang general
 
@@ -334,7 +337,11 @@ Penjelasan: Disini kita akan memberikan nama untuk masing masing file json agar 
 
 <img width="205" height="145" alt="image" src="https://github.com/user-attachments/assets/da46ba99-d0c1-4ea8-ae5c-e6e0650dc9ce" />
 
-Penjelasan: Pengecekan File (os.path.exists): Program mengecek apakah file JSON tersebut sudah ada atau belum dibuat lah umpamanya. Jika file belum ada (misal saat pertama kali aplikasi dijalankan), program akan otomatis membuat file baru dengan isi data bawaan (default_data). Penanganan Error (JSONDecodeError): Jika file JSON ternyata kosong atau rusak formatnya, program tidak akan crash, melainkan aman mengembalikan nilai default_data. Lalu untuk def save_json itu pokoknya untuk nyimpen data ke file json lah misal kita habis tambah kamar atau mungkin ngelakuin tranksaksi. Mode Tulis ('w'): Membuka file target dalam mode tulis (write), yang artinya data lama di dalam file akan ditimpa dengan data terbaru yang sudah diperbarui di dalam memori program.
+Penjelasan: Pengecekan File (os.path.exists): Program mengecek apakah file JSON tersebut sudah ada atau belum. 
+Jika file belum ada (misal saat pertama kali aplikasi dijalankan), program akan otomatis membuat file baru dengan isi data bawaan (default_data). 
+Penanganan Error (JSONDecodeError): Jika file JSON ternyata kosong atau rusak formatnya, program tidak akan crash, melainkan aman mengembalikan nilai default_data. 
+Lalu untuk def save_json itu pokoknya untuk nyimpen data ke file json lah misal kita habis tambah kamar atau mungkin ngelakuin tranksaksi. 
+Mode Tulis ('w'): Membuka file target dalam mode tulis (write), yang artinya data lama di dalam file akan ditimpa dengan data terbaru yang sudah diperbarui di dalam memori program.
 
 
 #### Def Catat Tranksaksi
@@ -352,6 +359,7 @@ Penjelasan: Digunakan sebagai sistem "invoice berjalan" otomatis untuk merekam, 
 
 Penjelasan: Digunakan untuk membaca data kamar dari file rooms.json, mengurutkannya secara teratur, lalu menampilkan informasi status seluruh kamar kos ke dalam bentuk tabel terminal yang rapi menggunakan library PrettyTable. Mengembalikan Nilai (return rooms): Mengembalikan data kamar yang sudah dimuat agar bisa langsung digunakan kembali oleh fungsi lain (seperti menu pengecekan admin atau penyewaan user).
 
+
 ### 7.2.2. Menu utama 
 
 #### Def login
@@ -360,17 +368,20 @@ Penjelasan: Digunakan untuk membaca data kamar dari file rooms.json, mengurutkan
 
 Penjelasan: Mengelola sistem otentikasi masuk (login) bagi multi-role (Admin dan User) dengan batasan kesempatan mencoba untuk alasan keamanan. Lalu disitu kami pakai library pwinput supaya ketika kita input password akan dilambangkan dengan bintang *. Lalu untuk password kami pakai tipe data int, jadi password hanya berupa angka. Pengguna diberikan batas maksimal 3 kali percobaan salah sebelum akses dikunci.
 
+
 #### Def Registrasi
 
 <img width="319" height="272" alt="image" src="https://github.com/user-attachments/assets/b972df07-3150-4327-9c26-8434ad11eef2" />
 
 Penjelasan: pendaftaran akun baru bagi pengguna (user) ke dalam sistem. Mengecek ke file users.json apakah username tersebut sudah pernah terdaftar sebelumnya untuk mencegah duplikasi akun. Jika aman, data akun baru dibuat dengan peran bawaan (role: "user") dan saldo awal bernilai 0, lalu disimpan secara permanen menggunakan save_json.
 
+
 #### Def Main
 
 <img width="248" height="265" alt="image" src="https://github.com/user-attachments/assets/11d09de2-ec47-47ee-90bb-f9fc5c3f5ee3" />
 
-Penjelasan: Disini kita pakai os clear supaya tampilan dari terminal itu bersih. Lalu menggunakan perulangan while True yang menjadi perulangan utama dari sistem kami
+Penjelasan: Disini kita pakai os clear supaya tampilan dari terminal itu bersih. Lalu menggunakan perulangan while True yang menjadi perulangan utama dari program kami
+
 
 ### 7.2.3. Def Menu Admin
 
@@ -379,7 +390,8 @@ Penjelasan: Disini kita pakai os clear supaya tampilan dari terminal itu bersih.
 <img width="410" height="289" alt="image" src="https://github.com/user-attachments/assets/71c21428-11f8-4907-9410-4e4342b591c8" />
 <img width="287" height="250" alt="image" src="https://github.com/user-attachments/assets/e8cc272c-dd6e-4032-9354-f7b2fd8453a4" />
 
-Penjelasan: Digunakan oleh admin untuk menambahkan unit kamar kos baru ke dalam sistem secara interaktif dengan penomoran otomatis dan validasi input yang aman. Sistem menyaring kamar berdasarkan tipenya, mencari nomor urut angka terbesar yang sudah ada, lalu secara otomatis menaikkan angkanya (misal: jika kamar L terakhir adalah L3, maka otomatis dibuatkan L4). Menyusun data kamar baru ke dalam struktur dictionary (dengan status awal belum terpakai/False, belum ada penghuni, dan sisa hari 0), lalu menyimpannya secara permanen ke file rooms.json menggunakan fungsi save_json.
+Penjelasan: Digunakan oleh admin untuk menambahkan unit kamar kos baru ke dalam sistem secara interaktif dengan penomoran otomatis dan validasi input yang aman. program memfilter kamar berdasarkan tipenya, mencari nomor urut angka terbesar yang sudah ada, lalu secara otomatis menaikkan angkanya (misal: jika kamar L terakhir adalah L3, maka otomatis dibuatkan L4). Menyusun data kamar baru ke dalam struktur dictionary (dengan status awal belum terpakai/False, belum ada penghuni, dan sisa hari 0), lalu menyimpannya secara permanen ke file rooms.json menggunakan fungsi save_json.
+
 
 #### Def Admin_Pengecekan_kamar
 
@@ -388,11 +400,13 @@ Penjelasan: Digunakan oleh admin untuk menambahkan unit kamar kos baru ke dalam 
 
 Penjelasan: Digunakan oleh admin untuk mengelola status operasional kamar kos secara berkala, yang meliputi pengubahan sisa masa sewa penghuni dan validasi proses checkout kamar. Memanggil fungsi tampilkan_tabel_kamar(). Pakai while true untuk perulangan dari sub menu di kelola kamar. Mengubah nilai sisa_hari sesuai input angka admin, lalu langsung memperbarui file rooms.json. Mengubah status kamar menjadi kosong (terpakai = False), menghapus data penghuni (penghuni = None), mereset sisa hari menjadi 0, dan menyimpan perubahannya
 
+
 #### Def menu
 
 <img width="422" height="341" alt="image" src="https://github.com/user-attachments/assets/97bb0f4b-4784-4c3a-ac7d-bc30427e7d17" />
 
 Penjelasan: Digunakan oleh admin untuk memantau total saldo keuangan kos secara real-time serta mencatat transaksi pengeluaran operasional (seperti pembayaran tagihan). Pakai while True untuk perulangan dari sub menu nya. Memuat seluruh data transaksi dari file transactions.json, lalu menjumlahkan total seluruh transaksi yang bertipe "pemasukan" dan menguranginya dengan total transaksi bertipe "pengeluaran" untuk mendapatkan nominal saldo akhir yang akurat
+
 
 #### Def Menu_Hapus_akun
 
@@ -404,17 +418,22 @@ Penjelasan: Digunakan oleh admin untuk memantau total saldo keuangan kos secara 
 
 Penjelasan: Memuat data dari users.json dan menyaring akun agar hanya menampilkan daftar pengguna umum (user), sehingga akun admin utama terlindungi. Tabel Status Pelanggan (PrettyTable): Menampilkan daftar akun lengkap dengan informasi saldo tersisa, status kamar aktif, serta keterangan kelayakan apakah akun tersebut sudah bisa dihapus atau belum. if user['saldo'] > 0 or kamar_aktif itu untuk Mencegah penghapusan akun jika pelanggan yang bersangkutan masih memiliki sisa saldo aktif di dompet digitalnya atau masih tercatat menghuni kamar kos (wajib bersyarat saldo 0 dan sudah checkout).
 
+
 #### Def menu_laporan_tranksaksi
 
 <img width="409" height="316" alt="image" src="https://github.com/user-attachments/assets/0a630de5-dba3-4383-b81d-45566d5f56c1" />
 
-Penjelasan: Digunakan oleh admin untuk memantau, merekap, dan mencari riwayat laporan arus keuangan (transaksi masuk dan keluar) yang tersimpan di dalam sistem. Memuat seluruh data transaksi secara otomatis dari file transactions.json menggunakan fungsi load_json. Opsi 1 (Seluruh Transaksi): Menampilkan seluruh riwayat arus kas ke dalam tabel terminal yang rapi menggunakan PrettyTable lengkap dengan informasi username, tipe transaksi, keterangan, dan nominal uangnya.   Opsi 2 (Pencarian Berdasarkan Username): Melakukan penyaringan data transaksi berdasarkan nama pengguna (username) yang diinputkan oleh admin, sehingga riwayat pembayaran dari penghuni tertentu bisa dilacak dengan mudah dan cepat.
+Penjelasan: Digunakan oleh admin untuk memantau, merekap, dan mencari riwayat laporan arus keuangan (transaksi masuk dan keluar) yang tersimpan di dalam sistem. Memuat seluruh data transaksi secara otomatis dari file transactions.json menggunakan fungsi load_json. 
+Opsi 1 (Seluruh Transaksi): Menampilkan seluruh riwayat arus kas ke dalam tabel terminal yang rapi menggunakan PrettyTable lengkap dengan informasi username, tipe transaksi, keterangan, dan nominal uangnya.   
+Opsi 2 (Pencarian Berdasarkan Username): Melakukan penyaringan data transaksi berdasarkan nama pengguna (username) yang diinputkan oleh admin, sehingga riwayat pembayaran dari penghuni tertentu bisa dilacak dengan mudah dan cepat.
+
 
 #### Def Menu_admin
 
 <img width="267" height="298" alt="image" src="https://github.com/user-attachments/assets/422e327a-f68d-4512-8698-2b4f24ae4eac" />
 
-Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan utama di menu admin, lalu menggunakan logika if elif else. Lalu kita tinggal memanggil setiap fungsi/def yang telah kita buat sebelumnya.
+Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan utama di menu admin, lalu menggunakan logika if elif else. Lalu kita tinggal memanggil setiap fungsi atau def yang telah kita buat sebelumnya.
+
 
 ### 7.2.4. Def Menu User
 
@@ -422,6 +441,7 @@ Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan u
 <img width="1591" height="284" alt="Screenshot 2026-11-03 232110" src="https://github.com/user-attachments/assets/5923d1be-b57c-4678-9848-d8d121667317" />
 
 Penjelasan: Fungsi menu_user_cek_info_sewa(username) ini dipakai untuk menampilkan informasi kamar yang sedang disewa oleh pengguna. Pertama, program membaca data kamar dari file JSON lewat load_json(FILE_ROOMS, []). Kemudian next() dengan generator expression mencari kamar pertama yang penghuninya sama dengan username dan berstatus terpakai, atau None jika tidak ditemukan. Setelah itu, program mengecek apakah pengguna memiliki kamar. Jika ada, variabel ac_status diisi "AC" apabila kamar memiliki AC dan "Non-AC" jika tidak, lalu program mencetak nomor kamar, tipe, fasilitas, dan sisa hari sewa. Jika tidak ada kamar yang cocok, program menampilkan pesan bahwa pengguna belum menyewa kamar apa pun.
+
 
 #### Def Saldo
 <img width="939" height="316" alt="Screenshot 2026-11-03 232135" src="https://github.com/user-attachments/assets/485a692c-6181-4db7-a7c0-ae3827997984" />
@@ -432,6 +452,7 @@ Di dalam while True, pengguna ditanya apakah ingin mengisi saldo, dengan .lower(
 <img width="1078" height="568" alt="Screenshot 2026-11-03 232724" src="https://github.com/user-attachments/assets/4f8e63aa-ae38-4f44-9620-49e89d6a4f20" />
 
 Penjelasan: Setelah saldo bertambah, program memanggil catat_transaksi() untuk mencatat riwayat pemasukan, menampilkan saldo terbaru, lalu break kembali ke menu utama. except ValueError menangkap input nominal yang bukan angka, sedangkan elif dan else menangani jawaban “n” (batal) dan input selain ‘y’ atau ’n’. except KeyboardInterrupt di baris 439 menangani Ctrl+C pada pertanyaan awal.
+
 
 #### Def Sewa Kamar
 <img width="1316" height="718" alt="Screenshot 2026-11-03 232901" src="https://github.com/user-attachments/assets/9b0dd20c-8804-4166-ab61-673f60fd2f41" />
@@ -451,6 +472,7 @@ Program lalu mengecek saldo. Kalau saldo kurang dari harga, muncul pesan agar me
 
 Penjelasan: Bagian ini menutup fungsi menu_user_sewa_kamar. Setelah pembayaran berhasil, catat_transaksi() dipanggil untuk mencatat pemasukan sewa kamar (lengkap dengan nomor kamar dan durasi), lalu program menampilkan pesan bahwa kamar berhasil disewa. Jawaban pembayaran selain ‘y’ masuk ke else dan menampilkan “Penyewaan kamar dibatalkan”. Di tingkat paling luar, elif pesan_kamar == "n" kembali ke menu user, dan else menangani input selain ‘y’ atau ’n’.
 Mulai baris 557 ada fungsi baru, menu_user_perpanjang_sewa(username), yang awalnya memuat data kamar, harga, dan pengguna dari file JSON.
+
 
 #### Def Perpanjang Sewa
 
@@ -491,30 +513,30 @@ Sistem menggunakan 4 file JSON lokal sebagai media penyimpanan data:
 Program Sewa Kost In berhasil menyelesaikan permasalahan pencatatan manual sewa kost. Fitur pembagian role, integrasi saldo, transaksi sewa otomatis, serta sistem penyimpanan file JSON memastikan seluruh data transaksi dan kamar aman dengan akurat.
 
 ### Saran
-* Penambahan enkripsi kata sandi (misal: hashing dengan hashlib).
-* Pengembangan antarmuka berbasis GUI (Graphical User Interface) atau Web.
+* pengembangan top up saldo.
+* menambah keamanan data.
 
 ---
 
-## 10. Penjelasan Detail Fungsi & Struktur Kode (Code Breakdown)
+## 10. Penjelasan Detail Fungsi & Struktur Kode
 
-Setiap fungsi dalam kode program dirancang modular untuk menangani tugas spesifik:
+Setiap fungsi dalam kode program dirancang untuk menangani program:
 
 ### A. Fungsi 
-* `load_json(filename, default_data)`: Membaca file JSON dari direktori. Jika file belum ada, fungsi ini otomatis membuat file baru dengan isi data bawaan (*default*).
-* `save_json(filename, data)`: Menyimpan atau memperbarui data list/dictionary Python ke dalam file berformat JSON secara terstruktur.
-* `catat_transaksi(username, tipe, keterangan, jumlah)`: Mencatat transaksi keuangan secara otomatis, membuat ID unik berurutan (misal: `TRX001`, `TRX002`), menambahkan stempel waktu *real-time*, serta langsung mencetak struk/invoice ke layar terminal.
+* `load_json(filename, default_data)`: Membaca file JSON. Jika file belum ada, fungsi ini otomatis membuat file baru dengan isi data bawaan (*default*).
+* `save_json(filename, data)`: Menyimpan atau memperbarui data list/dictionary Python ke dalam file JSON.
+* `catat_transaksi(username, tipe, keterangan, jumlah)`: Mencatat transaksi keuangan secara otomatis, membuat ID unik berurutan (misal: `KBM-FT001`, `KBM-FT002`), menambahkan stempel waktu *real-time*, serta langsung mencetak struk/invoice ke layar terminal.
 
 ### B. Fungsi Admin (Pemilik Kost)
-* `tampilkan_tabel_kamar()`: Mengambil data kamar, mengurutkan nomor kamar secara otomatis (misal: `L1`, `L2`, `P1`), dan menampilkannya dalam bentuk tabel interaktif menggunakan *PrettyTable*.
-* `menu_admin_tambah_kamar()`: Menambahkan kamar baru secara dinamis. Sistem mendeteksi nomor kamar tertinggi yang ada (misal: jika sudah ada `L3`, maka otomatis membuat `L4`).
+* `tampilkan_tabel_kamar()`: Mengambil data kamar, mengurutkan nomor kamar secara otomatis (misal: `L1`, `L2`, `P1`), dan menampilkannya dalam bentuk tabel menggunakan *PrettyTable*.
+* `menu_admin_tambah_kamar()`: Menambahkan kamar baru. Sistem mendeteksi nomor kamar tertinggi yang ada (misal: jika sudah ada `L3`, maka otomatis membuat `L4`).
 * `menu_admin_pengecekan_kamar()`: Mengubah sisa hari sewa penyewa atau melakukan proses *check-out* untuk mengosongkan status kamar.
 * `menu_admin_lihat_saldo()`: Menghitung total kas dari selisih pemasukan dan pengeluaran serta mencatat pengeluaran operasional kost.
-* `menu_admin_hapus_akun()`: Menghapus akun penyewa dari database setelah memvalidasi bahwa penyewa tersebut tidak memiliki sisa saldo dan tidak dalam masa sewa aktif.
+* `menu_admin_hapus_akun()`: Menghapus akun penyewa dari JSON setelah memvalidasi bahwa penyewa tersebut tidak memiliki sisa saldo dan tidak dalam masa sewa aktif.
 * `menu_admin_laporan_transaksi()`: Menampilkan seluruh riwayat keuangan atau memfilter laporan transaksi khusus berdasarkan *username* penyewa tertentu.
 
 ### C. Fungsi User (Penyewa Kost)
-* `menu_user_cek_info_sewa(username)`: Memeriksa database kamar dan menampilkan detail kamar yang sedang disewa oleh user beserta sisa hari masa sewanya.
+* `menu_user_cek_info_sewa(username)`: Memeriksa kamar dan menampilkan detail kamar yang sedang disewa oleh user beserta sisa hari masa sewanya.
 * `menu_user_saldo(username)`: Menampilkan saldo terkini penyewa serta menyediakan fitur pengisian saldo (*top-up*).
 * `menu_user_sewa_kamar(username)`: Memvalidasi agar user yang sudah menyewa tidak bisa menyewa kamar lain, menampilkan daftar kamar kosong sesuai tipe gender, menghitung kalkulasi biaya sesuai durasi, memotong saldo, dan mengaktifkan status kamar.
 * `menu_user_perpanjang_sewa(username)`: Memperpanjang durasi sewa pada kamar yang sedang aktif digunakan dan menambahkan sisa hari sewa secara otomatis.
