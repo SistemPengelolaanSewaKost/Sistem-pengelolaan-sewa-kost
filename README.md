@@ -418,59 +418,60 @@ Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan u
 
 ### 7.2.4. Def Menu User
 
-<img width="848" height="418" alt="Screenshot 2026-11-03 201252" src="https://github.com/user-attachments/assets/c21a003e-ed4d-4a41-a9f6-86c17edfac86" />
+#### Def Cek Info Sewa
+<img width="1591" height="284" alt="Screenshot 2026-11-03 232110" src="https://github.com/user-attachments/assets/5923d1be-b57c-4678-9848-d8d121667317" />
 
-1. Definisi fungsi: `main_user_menu(username)` adalah fungsi menu utama, dan username dipakai agar menu bisa menampilkan nama user yang sedang login.   
-2. Pesan sambutan: Program mencetak “LOGIN BERHASIL, SELAMAT DATANG” plus nama user lewat `f-string`. Pesan ini muncul sekali saja karena ada di luar perulangan.
-3. Perulangan `while True`: Membuat menu muncul terus-menerus, jadi user bisa pilih fitur berkali-kali tanpa login ulang, sampai ia memilih untuk logout.
-4. Blok `try`: Dipakai untuk menangkap error, misalnya kalau user ngetik huruf padahal diminta angka, supaya program nggak langsung crash.
-5. Tampilan menu: Baris print dengan tanda = bikin header menu tampil rapi, dan \n nambah baris kosong di atasnya.
-7. Lima pilihan menu: Cek info kamar sewaan, lihat dan isi saldo, pilih kamar yang mau disewa, perpanjang sewa, dan logout.
-8. Input pilihan: `input()` meminta user mengetik angka 1-5 dan hasilnya disimpan di variabel pilihan. Hasilnya bertipe string, jadi kalau mau dibandingkan sebagai angka perlu diubah terlebuh dahulu pakai `int()`.
+Penjelasan: Fungsi menu_user_cek_info_sewa(username) ini dipakai untuk menampilkan informasi kamar yang sedang disewa oleh pengguna. Pertama, program membaca data kamar dari file JSON lewat load_json(FILE_ROOMS, []). Kemudian next() dengan generator expression mencari kamar pertama yang penghuninya sama dengan username dan berstatus terpakai, atau None jika tidak ditemukan. Setelah itu, program mengecek apakah pengguna memiliki kamar. Jika ada, variabel ac_status diisi "AC" apabila kamar memiliki AC dan "Non-AC" jika tidak, lalu program mencetak nomor kamar, tipe, fasilitas, dan sisa hari sewa. Jika tidak ada kamar yang cocok, program menampilkan pesan bahwa pengguna belum menyewa kamar apa pun.
 
-<img width="1273" height="481" alt="Screenshot 2026-11-03 211302" src="https://github.com/user-attachments/assets/64ee040b-fb18-4305-9132-d0ac49aab304" />
+#### Def Saldo
+<img width="939" height="316" alt="Screenshot 2026-11-03 232135" src="https://github.com/user-attachments/assets/485a692c-6181-4db7-a7c0-ae3827997984" />
 
-1. Percabangan `if-elif`: Variabel pilihan dari input() akan dicek satu per satu. Karena input() hasilnya string, pembandingnya ditulis "1", "2", dst. (pakai tanda kutip), jadi tidak perlu int().
-2. Pilihan 1-4: Masing-masing memanggil fungsi lain dan mengirim username sebagai argumen: `menu_user_cek_info_sewa`, `menu_user_saldo`, `menu_user_sewa_kamar`, dan `menu_user_perpanjang_sewa`. Jadi setiap fitur dipisah ke fungsinya sendiri agar kodenya rapi dan gampang dikelola.
-3. Pilihan 5 (logout): Program mencetak “ANDA BERHASIL LOGOUT!!” lalu break. Ini yang menghentikan `while True`, sehingga user keluar dari menu.
-4. Blok `else`: Kalau input bukan 1 sampai 5 (misalnya “9” atau huruf), program menampilkan “PILIHAN HANYA DARI 1-5 !!” lalu menu muncul lagi karena masih di dalam perulangan.
-5. `except KeyboardInterrupt`: Ini merupakan pasangan dari try. Kalau user menekan Ctrl+C, program tidak langsung berhenti, tapi menampilkan pesan “JANGAN KOMBINASI DENGAN CTRL” dan menu tetap lanjut.
+Penjelasa: Fungsi menu_user_saldo(username) menampilkan dan menambah saldo pengguna. Program membaca data pengguna dari file JSON, lalu next() mengambil data milik pengguna yang username-nya cocok. Saldo ditampilkan dengan format ribuan lewat :, pada f-string.
+Di dalam while True, pengguna ditanya apakah ingin mengisi saldo, dengan .lower() agar “Y” dan “y” sama-sama diterima. Jika jawabannya 'y', nominal diminta dan dikonversi dengan int(), ditambahkan ke user['saldo'], lalu disimpan kembali ke file JSON.
 
-<img width="1396" height="626" alt="Screenshot 2026-11-03 211808" src="https://github.com/user-attachments/assets/0851ecf4-946d-4e0c-8434-f4d0d16e2bbd" />
+<img width="1078" height="568" alt="Screenshot 2026-11-03 232724" src="https://github.com/user-attachments/assets/4f8e63aa-ae38-4f44-9620-49e89d6a4f20" />
 
-1. Batas percobaan: Fungsi `login()` menetapkan kesempatan = 3, dan perulangan for dengan range(1, kesempatan + 1) membatasi pengguna maksimal tiga kali percobaan.
-2. `Input username`: Username diminta lewat `input()`, dengan \n untuk memberi baris kosong agar tampilan rapi.
-3. `Input password`: `pwinput.pwinput()` menyamarkan ketikan menjadi *, lalu hasilnya dikonversi dengan `int()` sehingga password harus berupa angka.
-4. Penanganan `ValueError`: Jika password bukan angka, konversi gagal, program menampilkan pesan peringatan, lalu keluar dari fungsi dengan `return`.
-5. Penanganan `KeyboardInterrupt`: Dua blok (baris 670 dan 673) menangani penekanan Ctrl+C pada `input password` dan `username`, dengan menampilkan peringatan lalu keluar dari fungsi.
-6. Pengambilan data: `load_json(FILE_USERS, [])` membaca data pengguna dari file JSON, dengan [] sebagai nilai default jika file kosong atau belum ada.
-7. Pencarian pengguna: `next()` dengan generator expression mengambil data pertama yang username dan password-nya cocok, atau None jika tidak ada.
+Penjelasan: Setelah saldo bertambah, program memanggil catat_transaksi() untuk mencatat riwayat pemasukan, menampilkan saldo terbaru, lalu break kembali ke menu utama. except ValueError menangkap input nominal yang bukan angka, sedangkan elif dan else menangani jawaban “n” (batal) dan input selain ‘y’ atau ’n’. except KeyboardInterrupt di baris 439 menangani Ctrl+C pada pertanyaan awal.
 
-<img width="1283" height="443" alt="Screenshot 2026-11-03 212544" src="https://github.com/user-attachments/assets/073c1771-9d5f-45ad-a272-a08f28c3a213" />
+#### Def Sewa Kamar
+<img width="1316" height="718" alt="Screenshot 2026-11-03 232901" src="https://github.com/user-attachments/assets/9b0dd20c-8804-4166-ab61-673f60fd2f41" />
 
-1. Pengecekan hasil pencarian: `if user:` bernilai benar apabila data pengguna ditemukan pada pencarian sebelumnya. Jika hasilnya None, program masuk ke blok else.
-2. Pengecekan peran admin: Jika `user['role']` bernilai "admin", program memanggil `main_admin_menu()` lalu `break` untuk menghentikan perulangan percobaan login.
-3. Pengguna biasa: Jika perannya bukan admin, program memanggil `main_user_menu(user['username'])` dengan username sebagai argumen, kemudian break.
-4. Login gagal: Pada blok `else` terluar, variabel sisa dihitung dari kesempatan - percobaan, yaitu jumlah percobaan yang masih tersisa.
-5. Masih ada kesempatan: Jika sisa > 0, program menampilkan pesan kesalahan beserta jumlah sisa percobaan, lalu perulangan berlanjut ke percobaan berikutnya.
-6. Kesempatan habis: Jika sisa sudah 0, program menampilkan pesan bahwa akses ditolak, lalu `return False` untuk mengakhiri fungsi dengan status gagal.
+Penjelasan: Fungsi menu_user_sewa_kamar(username) memproses penyewaan kamar. Program mencari kamar aktif milik pengguna lewat next(); kalau sudah ada, muncul peringatan harus checkout dulu lalu return. Kalau belum, tabel kamar ditampilkan, lalu pengguna ditanya ingin memesan atau tidak. Jika “y”, program meminta tipe kamar (L/P) dengan .upper(), dan tipe di luar itu ditolak.
 
-<img width="1381" height="567" alt="Screenshot 2026-11-03 213609" src="https://github.com/user-attachments/assets/1296efb3-d609-4ad6-9834-e00a4cbd9e43" />
+<img width="1505" height="579" alt="image" src="https://github.com/user-attachments/assets/95d8b950-f38d-4172-a469-2914e5324539" />
 
-1. Input username: Username baru diminta lewat input() di dalam blok try. Jika pengguna menekan Ctrl+C, program menampilkan peringatan.
-2. Input password: `pwinput.pwinput()` menyamarkan ketikan menjadi *, lalu hasilnya dikonversi dengan int() sehingga password harus berupa angka.
-3. Penanganan ValueError: Jika password bukan angka, konversi gagal dan program menampilkan pesan peringatan. Pada bagian ini tidak ada return, jadi eksekusi tetap berlanjut.
-Penanganan `KeyboardInterrupt` pada password: Program menampilkan peringatan lalu keluar dari fungsi dengan return.
-5. Pengambilan data: `load_json(FILE_USERS, [])` membaca daftar pengguna yang sudah terdaftar, dengan [] sebagai nilai default jika file kosong atau belum ada.
-6. Pengecekan username duplikat: any() dengan generator expression memeriksa apakah ada pengguna yang username-nya sama dengan input. Jika ada, program menampilkan pesan bahwa username sudah digunakan, lalu keluar dari fungsi dengan return.
+Penjelasan: Bagian else ini menangani tipe kamar yang valid. Program menyaring kamar yang tipenya sesuai dan belum terpakai ke dalam available_rooms lewat list comprehension. Kalau hasilnya kosong, muncul pesan bahwa tidak ada kamar kosong untuk tipe tersebut. Setelah itu, kamar yang tersedia ditampilkan dalam tabel PrettyTable berisi nomor kamar dan fasilitas (AC atau Non-AC). Pengguna lalu diminta memilih nomor kamar, dan next() mencocokkannya dengan daftar kamar tersedia. Kalau tidak ketemu, muncul pesan “tidak valid atau tidak tersedia” lalu return.
 
-<img width="1028" height="316" alt="Screenshot 2026-11-03 215619" src="https://github.com/user-attachments/assets/bbf80e68-9b84-48c6-8597-54ef2b63b00b" />
+<img width="1439" height="480" alt="image" src="https://github.com/user-attachments/assets/1e20137e-c6c6-4b19-a299-b06423f77a3a" />
 
-1. Pembuatan data pengguna: Dictionary `new_user` menyimpan empat data: username dan password dari input sebelumnya, role yang diset "user", dan saldo dengan nilai awal 0.
-2. Penetapan peran otomatis: Karena role ditulis langsung sebagai "user", setiap akun hasil registrasi pasti berperan sebagai pengguna biasa. Akun admin tidak bisa dibuat lewat fitur ini.
-3. Penambahan ke daftar: `users.append(new_user)` menambahkan data baru ke daftar pengguna yang tadi dibaca dari file JSON.
-4. Penyimpanan ke file: `save_json(FILE_USERS, users)` menulis daftar yang sudah diperbarui kembali ke file JSON, sehingga akun tersimpan permanen.
-5. Konfirmasi: Program menampilkan pesan bahwa registrasi berhasil dan pengguna dapat langsung login.
+Penjelasan: Bagian ini memproses pembayaran sewa. Program mengambil key_durasi, jumlah_hari, dan label_durasi dari durasi_mapping sesuai pilihan durasi, lalu menentukan fasilitas_key (“ac” atau “non_ac”) dari data kamar. Dua nilai itu dipakai untuk mencari harga di prices, kemudian total biaya ditampilkan dengan format ribuan.
+Program lalu mengecek saldo. Kalau saldo kurang dari harga, muncul pesan agar mengisi saldo dulu dan fungsi berhenti lewat return. Kalau cukup, pengguna diminta konfirmasi pembayaran. Jika menjawab ‘y’, saldo dikurangi harga, kamar ditandai terpakai, penghuninya diisi username, sisa_hari diisi jumlah_hari, lalu data pengguna dan kamar disimpan ke file JSON.
+
+<img width="1418" height="388" alt="image" src="https://github.com/user-attachments/assets/a407077f-06e7-4980-9c38-7d408b06cc94" />
+
+Penjelasan: Bagian ini menutup fungsi menu_user_sewa_kamar. Setelah pembayaran berhasil, catat_transaksi() dipanggil untuk mencatat pemasukan sewa kamar (lengkap dengan nomor kamar dan durasi), lalu program menampilkan pesan bahwa kamar berhasil disewa. Jawaban pembayaran selain ‘y’ masuk ke else dan menampilkan “Penyewaan kamar dibatalkan”. Di tingkat paling luar, elif pesan_kamar == "n" kembali ke menu user, dan else menangani input selain ‘y’ atau ’n’.
+Mulai baris 557 ada fungsi baru, menu_user_perpanjang_sewa(username), yang awalnya memuat data kamar, harga, dan pengguna dari file JSON.
+
+#### Def Perpanjang Sewa
+
+<img width="1385" height="627" alt="image" src="https://github.com/user-attachments/assets/ae84d6ac-6051-4f8b-9fcf-1b93bdb7136f" />
+
+Penjelasan: Fungsi menu_user_perpanjang_sewa(username) memproses perpanjangan sewa kamar. Program memuat data kamar, harga, dan pengguna dari file JSON, lalu next() mencari kamar aktif milik pengguna. Kalau tidak ada, muncul pesan bahwa pengguna tidak punya sewaan aktif lalu return.
+Kalau ada, program mengambil data pengguna, menentukan label AC atau Non-AC, dan menampilkan kamar saat ini beserta sisa harinya. Harga untuk 1 bulan, 3 bulan, dan 1 tahun diambil dari prices sesuai fasilitas kamar (“ac” atau “non_ac”), ditampilkan sebagai tiga pilihan, lalu pengguna diminta mengetik angka 1-3 yang disimpan di pilihan_durasi.
+
+<img width="1251" height="693" alt="Screenshot 2026-11-03 234622" src="https://github.com/user-attachments/assets/3e157c8a-b81e-4756-b9e9-23b60407b5aa" />
+
+Penjelasan: Fungsi menu_user_perpanjang_sewa(username) memproses perpanjangan sewa kamar. Program mencari kamar aktif milik pengguna; jika tidak ada, fungsi berhenti dengan pesan peringatan. Jika ada, ditampilkan kamar saat ini beserta sisa harinya, lalu tiga pilihan durasi (1 bulan, 3 bulan, 1 tahun) dengan harga sesuai fasilitas kamar.
+Pilihan durasi dicocokkan dengan durasi_mapping yang berisi kunci harga, jumlah hari, dan label. Jika tidak valid atau saldo kurang, fungsi berhenti. Jika saldo cukup dan pengguna konfirmasi ‘y’, saldo dipotong sebesar harga, lalu sisa_hari ditambah jumlah_hari dengan += sehingga sisa hari lama tidak hilang.
+
+<img width="1638" height="395" alt="image" src="https://github.com/user-attachments/assets/e758163f-f2a5-42a7-87b4-1d68ec9d0145" />
+
+Penjelasan: Bagian ini menutup fungsi menu_user_perpanjang_sewa. Setelah saldo dipotong dan sisa hari ditambah, save_json() menyimpan data pengguna dan kamar ke file JSON agar perubahan permanen. Lalu catat_transaksi() mencatat perpanjangan sebagai pemasukan, lengkap dengan nomor kamar dan durasi, dan program menampilkan pesan berhasil beserta sisa hari terbaru. Jika pengguna tidak menjawab ‘y’ pada konfirmasi, else menampilkan “Perpanjangan sewa dibatalkan”.
+
+<img width="838" height="691" alt="image" src="https://github.com/user-attachments/assets/2267e107-bf8b-41f0-ab24-36bf957b17b2" />
+
+Penjelasan: Fungsi main_user_menu(username) menampilkan menu utama bagi pengguna yang sudah login. Program menyapa pengguna lewat f-string, lalu while True menjaga menu tetap muncul sampai pengguna logout. Di dalamnya, program mencetak lima pilihan menu dan meminta input angka 1-5 yang disimpan di pilihan.
+Karena input() menghasilkan string, pilihan dicek dengan if-elif terhadap "1" sampai "5". Pilihan 1-4 memanggil fungsi fitur masing-masing dengan username sebagai argumen, pilihan 5 mencetak pesan logout lalu break, dan else menangani input di luar 1-5. except KeyboardInterrupt menangkap Ctrl+C agar program tidak langsung berhenti.
 
 
 ## 8. File (JSON)
