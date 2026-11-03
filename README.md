@@ -106,7 +106,18 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 <img width="443" height="178" alt="image" src="https://github.com/user-attachments/assets/96c58ec8-d041-4010-84c5-54772cb6feb0" />
 
+Penjelasan:
 
+### Registrasi
+
+<img width="432" height="95" alt="image" src="https://github.com/user-attachments/assets/1992f166-aa7b-490f-b13c-e876114fd2b3" />
+
+Penjelasan:
+
+### Login (sebagai user atau penyewa kos)
+
+<img width="425" height="90" alt="image" src="https://github.com/user-attachments/assets/b47cd456-4e55-4328-a6a8-7060d86ac689" />
+Penjelasan: 
 
 ### Contoh Tabel Informasi Status Keseluruhan Kamar:
 === INFORMASI STATUS KESELURUHAN KAMAR ===
