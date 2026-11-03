@@ -528,8 +528,8 @@ Setiap fungsi dalam kode program dirancang modular untuk menangani tugas spesifi
 ## 11. Penanganan Error & Keamanan Input (Error Handling)
 
 Untuk mencegah program *crash* saat dijalankan oleh pengguna, beberapa mekanisme penanganan error telah diterapkan:
-* **Value Error Handling:** Menggunakan blok `try-except ValueError` pada setiap input angka (seperti masukan password, nominal saldo, dan pilihan menu) agar sistem tidak berhenti jika pengguna memasukkan karakter non-angka.
-* **Keyboard Interrupt Handling:** Menggunakan `except KeyboardInterrupt` untuk menangkap kombinasi tombol `Ctrl+C` agar pengguna tidak bisa keluar dari program secara paksa tanpa melalui alur logout resmi.
-* **Pencegahan Akun Duplikat:** Mengecek ketersediaan *username* saat registrasi untuk mencegah terjadinya *overlap* data user.
-* **Validasi Hapus Akun:** Menerapkan syarat berlapis pada fitur hapus akun agar admin tidak dapat menghapus akun yang masih memiliki saldo atau masih menempati kamar.
+* **Value Error Handling:** Menggunakan blok `try-except ValueError` pada setiap input angka (seperti masukan password, nominal saldo, dan pilihan menu) agar program tidak berhenti jika pengguna memasukkan karakter non-angka.
+* **Keyboard Interrupt Handling:** Menggunakan `except KeyboardInterrupt` untuk menangkap kombinasi tombol `Ctrl+C` agar pengguna tidak bisa keluar dari program secara paksa tanpa melalui alur logout.
+* **Pencegahan Akun Duplikat:** Mengecek ketersediaan *username* saat registrasi untuk mencegah terjadinya *duplikat* data user.
+* **Validasi Hapus Akun:** Menerapkan syarat pada fitur hapus akun agar admin tidak dapat menghapus akun yang masih memiliki saldo atau masih menempati kamar.
 
