@@ -33,7 +33,7 @@
 ### Deskripsi Masalah
 Pencarian dan penyewaan kamar kost di sekitar lingkungan kampus masih banyak dilakukan secara manual. Calon penyewa harus datang langsung atau menghubungi pemilik kost via pesan singkat untuk menanyakan ketersediaan kamar, harga sewa, dan fasilitas. 
 
-Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakukan di buku catatan terpisah sehingga rawan terjadi human error, data tidak diperbarui, pembayaran terlewat, atau bukti transaksi hilang.
+Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakukan di buku catatan terpisah sehingga rawan terjadi error, data tidak diperbarui, pembayaran terlewat, atau bukti transaksi hilang.
 
 ### Rumusan Masalah
 1. Bagaimana merancang aplikasi Sewa Kost In dengan fitur registrasi, login, dan pembagian hak akses (Admin vs Penyewa)?
