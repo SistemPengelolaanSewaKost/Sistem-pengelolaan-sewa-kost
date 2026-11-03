@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Judul & Tema Proyek
+## 1. Judul & Tema
 
 * **Judul :** Sewa Kost In
 * **Tema Utama:** Sistem Pengelolaan sewa kost
@@ -59,7 +59,7 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 ---
 
-## 4. Analisis Teknis & Library Python
+## 4. Library Python
 
 * `json`: Membaca dan menyimpan database user atau admin dalam format JSON.
 * `os`: Membersihkan tampilan layar terminal agar terminal rapi.
@@ -69,7 +69,7 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 ---
 
-## 5. Flowchart & Alur Logika Sistem
+## 5. Flowchart & Alur
 
 <img width="1812" height="1032" alt="flowchart terbaru-Page-1 drawio" src="https://github.com/user-attachments/assets/114feae3-4faf-4c50-9b15-65a901ab2a04" />
 
@@ -117,7 +117,7 @@ Keluar (Pilihan 3): Keluar dari program (END)
 
 ---
 
-## 6. Daftar Fitur Berdasarkan Role
+## 6. Daftar Menu Berdasarkan Role
 
 ### A. Hak Akses Admin (Pemilik Kost)
 1. **Kelola Kamar (CRUD):** Mengubah sisa hari sewa penyewa secara manual dan melakukan validasi check-out kamar.
@@ -327,12 +327,12 @@ Aplikasi Sewa Kost In berhasil menyelesaikan permasalahan pencatatan manual sewa
 
 Setiap fungsi dalam kode program dirancang modular untuk menangani tugas spesifik:
 
-### A. Fungsi Database & Utility
+### A. Fungsi 
 * `load_json(filename, default_data)`: Membaca file JSON dari direktori. Jika file belum ada, fungsi ini otomatis membuat file baru dengan isi data bawaan (*default*).
 * `save_json(filename, data)`: Menyimpan atau memperbarui data list/dictionary Python ke dalam file berformat JSON secara terstruktur.
 * `catat_transaksi(username, tipe, keterangan, jumlah)`: Mencatat transaksi keuangan secara otomatis, membuat ID unik berurutan (misal: `TRX001`, `TRX002`), menambahkan stempel waktu *real-time*, serta langsung mencetak struk/invoice ke layar terminal.
 
-### B. Fungsi Manajemen Admin (Pemilik Kost)
+### B. Fungsi Admin (Pemilik Kost)
 * `tampilkan_tabel_kamar()`: Mengambil data kamar, mengurutkan nomor kamar secara otomatis (misal: `L1`, `L2`, `P1`), dan menampilkannya dalam bentuk tabel interaktif menggunakan *PrettyTable*.
 * `menu_admin_tambah_kamar()`: Menambahkan kamar baru secara dinamis. Sistem mendeteksi nomor kamar tertinggi yang ada (misal: jika sudah ada `L3`, maka otomatis membuat `L4`).
 * `menu_admin_pengecekan_kamar()`: Mengubah sisa hari sewa penyewa atau melakukan proses *check-out* untuk mengosongkan status kamar.
@@ -340,7 +340,7 @@ Setiap fungsi dalam kode program dirancang modular untuk menangani tugas spesifi
 * `menu_admin_hapus_akun()`: Menghapus akun penyewa dari database setelah memvalidasi bahwa penyewa tersebut tidak memiliki sisa saldo dan tidak dalam masa sewa aktif.
 * `menu_admin_laporan_transaksi()`: Menampilkan seluruh riwayat keuangan atau memfilter laporan transaksi khusus berdasarkan *username* penyewa tertentu.
 
-### C. Fungsi Operasional User (Penyewa Kost)
+### C. Fungsi User (Penyewa Kost)
 * `menu_user_cek_info_sewa(username)`: Memeriksa database kamar dan menampilkan detail kamar yang sedang disewa oleh user beserta sisa hari masa sewanya.
 * `menu_user_saldo(username)`: Menampilkan saldo terkini penyewa serta menyediakan fitur pengisian saldo (*top-up*).
 * `menu_user_sewa_kamar(username)`: Memvalidasi agar user yang sudah menyewa tidak bisa menyewa kamar lain, menampilkan daftar kamar kosong sesuai tipe gender, menghitung kalkulasi biaya sesuai durasi, memotong saldo, dan mengaktifkan status kamar.
