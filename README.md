@@ -155,9 +155,8 @@ Penjelasan:
 
 Penjelasan:
 
-<img width="492" height="332" alt="image" src="https://github.com/user-attachments/assets/8a9bfa18-1437-4e33-bd62-b9e5735ce3b5" />
 
-Penjelasan: 
+
 
 ## 8. Struktur File Database (JSON)
 
