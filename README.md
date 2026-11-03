@@ -101,8 +101,7 @@ Hapus Akun User: Admin melihat daftar akun user lalu memasukkan username yang in
 Laporan Transaksi: Admin bisa melihat seluruh riwayat transaksi yang ada di JSON atau melakukan pencarian riwayat transaksi berdasarkan username pelanggan
 
 
-<img width="2022" height="1947" alt="flowchart terbaru-Halaman-3 drawio" src="https://github.com/user-attachments/assets/442ee031-0bbd-4506-90a9-4adfee9a3f13" />
-
+<img width="2022" height="1947" alt="flowchart terbaru-Halaman-3 drawio (1)" src="https://github.com/user-attachments/assets/f4119078-2a09-4162-b8c6-7c25d58126d7" />
 
 
 ---
