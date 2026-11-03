@@ -197,7 +197,7 @@ Penjelasan:
 
 ### Lihat saldo 
 
-<img width="576" height="131" alt="image" src="https://github.com/user-attachments/assets/74b8efcf-bd13-449b-975f-ece1af64845d" />
+<img width="445" height="167" alt="image" src="https://github.com/user-attachments/assets/7c7b1e7f-d31d-449a-a2ff-256a473d4ba4" />
 
 Penjelasan: 
 
