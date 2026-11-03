@@ -1,4 +1,4 @@
-# Sewa Kost In — Sistem Pengelolaan Sewa Kost Berbasis Python & JSON
+# Sistem Pengelolaan Sewa Kost (JURAGAN CODE)
 
 > Proyek Akhir Praktikum Dasar-Dasar Pemrograman (DDP)  
 > Program Studi Sistem Informasi — Fakultas Teknik, Universitas Mulawarman (2026)
@@ -7,24 +7,24 @@
 
 ## 1. Judul & Tema Proyek
 
-* **Judul Aplikasi:** Sewa Kost In
-* **Tema Utama:** Sistem Informasi Pengelolaan Sewa Kost Berbasis CLI (Command Line Interface) dan File Storage JSON
+* **Judul :** Sewa Kost In
+* **Tema Utama:** Sistem Pengelolaan sewa kost
 * **Mata Kuliah:** Dasar-Dasar Pemrograman (DDP)
 * **Institusi:** Program Studi Sistem Informasi, Universitas Mulawarman
 * **Asisten Laboratorium:**
   * Muhammad Davi Aditya Pratama (NIM. 2509116070)
-  * Pratama (NIM. 2509116075)
+  * Hanif Amelia Putri (NIM. 2509116075) 
 
 ---
 
 ## 2. Anggota Kelompok & Peran Kerja
 
-| No | Nama Mahasiswa | NIM | Peran Utama & Kontribusi |
+| No | Nama Mahasiswa | NIM | Kontribusi |
 | :---: | :--- | :---: | :--- |
-| **1** | [NAMA MAHASISWA 1] | [NIM] | [Koordinator, Logika Program & Coding] |
-| **2** | [NAMA MAHASISWA 2] | [NIM] | [Penyusunan Flowchart & Dokumen Laporan] |
-| **3** | [NAMA MAHASISWA 3] | [NIM] | [Pengembangan Fitur & Testing Bug] |
-| **4** | [NAMA MAHASISWA 4] | [NIM] | [Finishing & Dokumentasi Kode] |
+| **1** | [Dimas Surya Pasyha] | [2609116044] | [Koordinator, Logika Program & Coding] |
+| **2** | [Muhammad Yurcell Nabil] | [2609116073] | [Penyusunan Flowchart & Dokumen Laporan] |
+| **3** | [Arfis Orica Shirena] | [2609116076] | [Pengembangan Fitur & Testing Bug] |
+| **4** | [Fia Hulfiah] | [2609116078] | [Finishing & Dokumentasi Kode] |
 
 ---
 
@@ -43,8 +43,7 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 5. Bagaimana menyimpan seluruh data ke dalam file JSON agar data tetap persisten setelah aplikasi ditutup?
 
 ### Batasan Masalah
-* Aplikasi berbasis CLI (Command Line Interface).
-* Hanya memiliki 2 role pengguna: Admin (Pemilik Kost) dan Penyewa.
+* Hanya memiliki 2 role pengguna: Admin (Pemilik Kost) dan User (Penyewa).
 * Pembayaran dilakukan menggunakan saldo internal aplikasi (simulasi top-up), tidak terhubung ke payment gateway asli.
 * Penyimpanan data menggunakan file lokal berformat JSON (users.json, rooms.json, transactions.json, prices.json).
 
@@ -62,26 +61,25 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 ## 4. Analisis Teknis & Library Python
 
-Aplikasi ini dibangun menggunakan bahasa pemrograman Python 3 dengan memanfaatkan modul/library berikut:
-* `json`: Membaca dan menyimpan database lokal dalam format JSON.
-* `os`: Membersihkan tampilan layar terminal (cls / clear) agar antarmuka rapi.
-* `pwinput`: Menyembunyikan input kata sandi/password dengan karakter mask (***).
-* `prettytable`: Menampilkan data berbentuk tabel yang rapi di terminal CLI.
+* `json`: Membaca dan menyimpan database user atau admin dalam format JSON.
+* `os`: Membersihkan tampilan layar terminal agar terminal rapi.
+* `pwinput`: Menyembunyikan input password dengan karakter (***).
+* `prettytable`: Menampilkan data berbentuk tabel yang rapi di terminal.
 * `datetime`: Mengambil stempel waktu real-time untuk penomoran ID transaksi dan invoice.
 
 ---
 
 ## 5. Flowchart & Alur Logika Sistem
 
-[ START ]
-  │
-  ▼
-[ Tampilan Utama ]
-  ├──> (1) Login ──────> [ Autentikasi User / Admin ]
-  │                           ├── Admin  ──> [ Menu Utama Admin ]
-  │                           └── User   ──> [ Menu Utama User ]
-  ├──> (2) Registrasi ──> [ Buat Akun Baru (Password Angka) ]
-  └──> (3) Keluar ─────> [ END ]
+<img width="1812" height="1032" alt="flowchart terbaru-Page-1 drawio" src="https://github.com/user-attachments/assets/114feae3-4faf-4c50-9b15-65a901ab2a04" />
+
+
+<img width="4812" height="1622" alt="flowchart terbaru-Halaman-2 drawio" src="https://github.com/user-attachments/assets/b21da00a-c56a-429c-8b79-0e7e83815cd7" />
+
+
+<img width="2022" height="1947" alt="flowchart terbaru-Halaman-3 drawio" src="https://github.com/user-attachments/assets/442ee031-0bbd-4506-90a9-4adfee9a3f13" />
+
+
 
 ---
 
@@ -202,3 +200,4 @@ Untuk mencegah program *crash* saat dijalankan oleh pengguna, beberapa mekanisme
 * **Keyboard Interrupt Handling:** Menggunakan `except KeyboardInterrupt` untuk menangkap kombinasi tombol `Ctrl+C` agar pengguna tidak bisa keluar dari program secara paksa tanpa melalui alur logout resmi.
 * **Pencegahan Akun Duplikat:** Mengecek ketersediaan *username* saat registrasi untuk mencegah terjadinya *overlap* data user.
 * **Validasi Hapus Akun:** Menerapkan syarat berlapis pada fitur hapus akun agar admin tidak dapat menghapus akun yang masih memiliki saldo atau masih menempati kamar.
+
