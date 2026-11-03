@@ -73,35 +73,46 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 <img width="1812" height="1032" alt="flowchart terbaru-Page-1 drawio" src="https://github.com/user-attachments/assets/114feae3-4faf-4c50-9b15-65a901ab2a04" />
 
-Ketika program pertama kali dijalankan (START), pengguna akan dihadapkan pada Tampilan Utama dengan tiga pilihan menu: Login, Registrasi, atau Keluar.
+Ketika program pertama kali dijalankan * `(START)`, pengguna akan dihadapkan pada Tampilan Utama dengan tiga pilihan menu: Login, Registrasi, atau Keluar.
 
-Proses Registrasi (Pilihan 2): Pengguna memasukkan username dan password baru lalu sistem langsung melakukan pengecekan ke file users.json untuk melihat apakah username tersebut sudah dipakai atau belum. Jika terdeteksi duplikat atau udah ada, sistem akan meminta pengguna untuk melakukan login ulang. Jika username belum ada, data akun baru disimpan ke users.json dan pengguna diarahkan kembali ke menu awal.
+* `Proses Registrasi (Pilihan 2)`: Pengguna memasukkan username dan password baru lalu sistem langsung melakukan pengecekan ke file users.json untuk melihat apakah username tersebut sudah dipakai atau belum. Jika terdeteksi duplikat atau udah ada, sistem akan meminta pengguna untuk melakukan login ulang. Jika username belum ada, data akun baru disimpan ke users.json dan pengguna diarahkan kembali ke menu awal.
 
-Proses Login (Pilihan 1): Pengguna memasukkan username dan password lalu sistem memverifikasi data tersebut ke file users.json.
+* `Proses Login (Pilihan 1)`: Pengguna memasukkan username dan password lalu sistem memverifikasi data tersebut ke file users.json.
 Jika Login Gagal: Sistem memberikan batasan percobaan sebanyak 3 kali. Setiap kali gagal, kuota percobaan berkurang 1. Jika kesempatan habis (sisa == 0), sistem memberikan opsi apakah pengguna ingin kembali ke menu utama atau memilih keluar dari program.
-Jika Login Berhasil: Sistem mengecek role dari akun tersebut. Akun ber-role Admin akan masuk ke Menu Admin, sedangkan akun ber-role User akan masuk ke Menu User.
+
+* `Jika Login Berhasil`: Sistem mengecek role dari akun tersebut. Akun ber-role Admin akan masuk ke Menu Admin, sedangkan akun ber-role User akan masuk ke Menu User.
 Keluar (Pilihan 3): Keluar dari program (END)
 
 
 <img width="4812" height="1622" alt="flowchart terbaru-Halaman-2 drawio" src="https://github.com/user-attachments/assets/b21da00a-c56a-429c-8b79-0e7e83815cd7" />
 
 
-Kelola Kamar: Admin dapat melihat status seluruh kamar (tersedia maupun terpakai). Di dalam sub-menu ini, Admin bisa memilih dua tindakan:
+* `Kelola Kamar`: Admin dapat melihat status seluruh kamar (tersedia maupun terpakai). Di dalam sub-menu ini, Admin bisa memilih dua tindakan:
 
-Ubah sisa hari: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu Admin menginput sisa hari penyewaan yang baru sebelum disimpan ke file JSON.
+* `Ubah sisa hari`: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu Admin menginput sisa hari penyewaan yang baru sebelum disimpan ke file JSON.
 
-Validasi Check-out: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu meminta konfirmasi checkout untuk memperbarui status kamar di file JSON.
+* `Validasi Check-out`: Admin memasukkan nomor kamar, sistem memvalidasi kamar, lalu meminta konfirmasi checkout untuk memperbarui status kamar di file JSON.
 
-Tambah Kamar: Admin dapat menambahkan kamar baru dengan menentukan tipe kamar (L atau P) serta memilih apakah kamar tersebut fasilitas AC atau tidak. Data kamar baru ini langsung disimpan ke file JSON.
+* `Tambah Kamar`: Admin dapat menambahkan kamar baru dengan menentukan tipe kamar (L atau P) serta memilih apakah kamar tersebut fasilitas AC atau tidak. Data kamar baru ini langsung disimpan ke file JSON.
 
-Lihat Saldo & Keuangan: Admin dapat mengecek total saldo sistem yang dihitung secara otomatis dari pemasukan dan pengeluaran pada file JSON, Admin juga bisa memproses pembayaran tagihan serta mencetak invoice.
+* `Lihat Saldo & Keuangan`: Admin dapat mengecek total saldo sistem yang dihitung secara otomatis dari pemasukan dan pengeluaran pada file JSON, Admin juga bisa memproses pembayaran tagihan serta mencetak invoice.
 
-Hapus Akun User: Admin melihat daftar akun user lalu memasukkan username yang ingin dihapus. Sistem akan mengecek apakah username ada di file JSON dan memverifikasi syarat penghapusan (yaitu user tidak sedang menyewa kamar dan saldonya 0). Jika syarat terpenuhi, akun berhasil dihapus.
+* `Hapus Akun User`: Admin melihat daftar akun user lalu memasukkan username yang ingin dihapus. Sistem akan mengecek apakah username ada di file JSON dan memverifikasi syarat penghapusan (yaitu user tidak sedang menyewa kamar dan saldonya 0). Jika syarat terpenuhi, akun berhasil dihapus.
 
-Laporan Transaksi: Admin bisa melihat seluruh riwayat transaksi yang ada di JSON atau melakukan pencarian riwayat transaksi berdasarkan username pelanggan
+* `Laporan Transaksi`: Admin bisa melihat seluruh riwayat transaksi yang ada di JSON atau melakukan pencarian riwayat transaksi berdasarkan username pelanggan
 
 
 <img width="2022" height="1947" alt="flowchart terbaru-Halaman-3 drawio (1)" src="https://github.com/user-attachments/assets/f4119078-2a09-4162-b8c6-7c25d58126d7" />
+
+* `Cek Info Kamar Sewaan`: Sistem mengecek apakah akun pengguna memiliki kamar yang sedang disewa. Jika ada, sistem akan menampilkan sisa masa sewa dan sisa hari penyewaannya.
+
+* `Melihat dan Mengisi Saldo`: Pengguna dapat melihat sisa saldo akun saat ini. Jika memilih untuk mengisi saldo, pengguna menginput nominal yang diinginkan, sistem menambah saldo, dan secara otomatis mencetak invoice transaksi.
+
+* `Memilih Kamar yang Ingin Disewa`: Pengguna melihat daftar kamar tersedia, memilih tipe kamar (L atau P), menentukan nomor kamar, melihat daftar harga, lalu memilih durasi sewa. Sebelum memproses, sistem mengecek kecukupan saldo pengguna. Jika saldo cukup dan pengguna mengonfirmasi, transaksi diproses dan disimpan ke file JSON.
+
+* `Memperpanjang Sewa`: Sistem memastikan pengguna sudah memiliki kamar sewaan. Jika punya, pengguna memasukkan durasi perpanjangan sewa. Jika saldo mencukupi, sistem memperbarui data sewa di file JSON dan mencetak invoice baru.
+
+* `Logout`: Pengguna keluar dari sesi akun dan dikembalikan ke Tampilan Utama.
 
 
 ---
