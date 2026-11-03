@@ -145,7 +145,10 @@ Jika Login Gagal: Sistem memberikan batasan percobaan sebanyak 3 kali. Setiap ka
 
 <img width="443" height="178" alt="image" src="https://github.com/user-attachments/assets/96c58ec8-d041-4010-84c5-54772cb6feb0" />
 
-Penjelasan: saat program dijalankan, sistem akan menampilkan menu utama dengan tiga pilihan, yaitu: 1. Login 2. Registrasi 3. Keluar 
+Penjelasan: saat program dijalankan, sistem akan menampilkan menu utama dengan tiga pilihan, yaitu: 
+1. Login
+2. Registrasi
+3. Keluar 
 
 ### 7.1.2. Registrasi
 
@@ -153,17 +156,25 @@ Penjelasan: saat program dijalankan, sistem akan menampilkan menu utama dengan t
 
 Penjelasan: jika user memilih opsi registrasi, sistem meminta user untuk menginput username baru dan password baru. setelah itu, sistem menyimpan dalam file users.json
 
+
 ### 7.1.3. Login (sebagai user atau penyewa kos)
 
 <img width="425" height="90" alt="image" src="https://github.com/user-attachments/assets/b47cd456-4e55-4328-a6a8-7060d86ac689" />
 
 Penjelasan: setelah melakukan registrasi, user disilahkan login dengan menginput username dan password untuk dapat mengakses menu user
 
+
 #### Menu user 
 
 <img width="402" height="215" alt="image" src="https://github.com/user-attachments/assets/c4bf3e19-d94c-4af4-926b-f88b2869d791" />
 
-Penjelasan: setelah login berhasil, sistem akan menampilkan pilihan menu sebagai berikut: 1. cek info kamar sewaan 2. melihat dan mengisi saldo 3. memilih kamar yang ingin disewakan 4. memperpanjang sewa 5. logout
+Penjelasan: setelah login berhasil, sistem akan menampilkan pilihan menu sebagai berikut:
+1. cek info kamar sewaan
+2. melihat dan mengisi saldo
+3. memilih kamar yang ingin disewakan
+4. memperpanjang sewa
+5. logout
+
 
 #### Cek kamar yang sedang disewa
 
@@ -171,11 +182,13 @@ Penjelasan: setelah login berhasil, sistem akan menampilkan pilihan menu sebagai
 
 Penjelasan: karena caca adalah user atau penyewa baru, caca masih belum memiliki kamar 
 
+
 #### Lihat dan isi saldo
 
 <img width="453" height="428" alt="image" src="https://github.com/user-attachments/assets/7b81192f-4c16-4d2e-b284-b8f94098059d" />
 
 Penjelasan: sebelum caca menyewa kamar, caca harus isi saldo terlebih dahulu.
+
 
 #### Melihat kamar yang ingin disewa
 
@@ -185,21 +198,30 @@ Penjelasan: sebelum penyewa melakukan penyewaan kamar, sistem akan menampilkan t
 
 <img width="476" height="450" alt="image" src="https://github.com/user-attachments/assets/c7585865-27dd-44b6-b62e-aae03ada7a03" />
 
-Penjelasan: setelah melihat ketersediaan kamar, penyewa dapat memilih tipe dan fasilitas yang dinginkan serta durasi sewa beserta dengan harganya. terdapat 3 pilihan yaitu: 1. 1 bulan Rp1,000,000 2. 3 bulan Rp2,800,000 3. 1 tahun Rp11,000,000
+Penjelasan: setelah melihat ketersediaan kamar, penyewa dapat memilih tipe dan fasilitas yang dinginkan serta durasi sewa beserta dengan harganya. terdapat 3 pilihan yaitu: 
+1. 1 bulan Rp1,000,000
+2. 3 bulan Rp2,800,000
+3. 1 tahun Rp11,000,000
 
 <img width="492" height="332" alt="image" src="https://github.com/user-attachments/assets/2fd9903d-8786-4fe5-b927-625cbfaae9eb" />
 
 Penjelasan: setelah melakukan pembayaran, terdapat struk sebagai bukti telah memesan kamar
 
+
 #### Perpanjangan sewa
 
 <img width="562" height="266" alt="image" src="https://github.com/user-attachments/assets/1f24317b-4113-44d4-8e71-89b7fd14fd77" />
 
-Penjelasan: penyewa bisa melakukan perpanjangan sewa kamar, dengan pilihan menu yaitu: 1. 1 bulan Rp1,000,000 2. 3 bulan Rp2,800,000 3. 1 tahun Rp11,000,000
+Penjelasan: penyewa bisa melakukan perpanjangan sewa kamar, dengan pilihan menu yaitu: 
+1. 1 bulan Rp1,000,000
+2. 3 bulan Rp2,800,000
+3. 1 tahun Rp11,000,000
+
 
 <img width="840" height="328" alt="image" src="https://github.com/user-attachments/assets/2eeec1a6-af82-4f53-9920-87206b9c9b23" />
 
 Penjelasan: setelah penyewa yakin ingin melakukan perpanjangan sewa kamar, sistem akan mencetak struknya
+
 
 ### 7.1.4. Login (sebagai admin atau pemilik kos)
 
@@ -207,17 +229,29 @@ Penjelasan: setelah penyewa yakin ingin melakukan perpanjangan sewa kamar, siste
 
 Penjelasan: admin bisa melakukan login dengan memasukkan username 'admin' dan password '123' untuk bisa mengakses menu admin
 
+
 #### Menu admin
 
 <img width="450" height="237" alt="image" src="https://github.com/user-attachments/assets/0596b9e6-4168-4a6f-81eb-39ecbcd59c05" />
 
-Penjelasan: setelah admin berhasil login, sistem akan menampilkan menu admin yaitu: 1. Kelola kamar 2. Tambah kamar 3. Lihat saldo 4. Hapus akun 5. Laporan transaksi 6. Logout
+Penjelasan: setelah admin berhasil login, sistem akan menampilkan menu admin yaitu: 
+1. Kelola kamar
+2. Tambah kamar
+3. Lihat saldo
+4. Hapus akun
+5. Laporan transaksi
+6. Logout
+
 
 #### Kelola kamar
 
 <img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/68551250-b33c-4a7e-b206-2c40d9680e22" />
 
-Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel. lalu sistem akan menampilkan menu kelola kamar yaitu: 1. ubah sisa hari dari user 2. validasi check out 3. kembali ke menu admin
+Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel. lalu sistem akan menampilkan menu kelola kamar yaitu: 
+1. ubah sisa hari dari user
+2. validasi check out
+3. kembali ke menu admin
+
 
 #### Ubah sisa hari sewa
 
@@ -225,11 +259,13 @@ Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin 
 
 Penjelasan: admin atau pemilik kos dapat mengubah sisa hari penyewa kos menyewa kamar dengan menginput nomor kamar yang ingin diubah serta menginput sisa hari dari penyewa tesebut
 
+
 #### Validasi checkout
 
 <img width="593" height="90" alt="image" src="https://github.com/user-attachments/assets/2e3b9162-70f5-4958-a358-77463552ad44" />
 
 Penjelasan: validasi checkout digunakan untuk mengubah ketersediaan kamar dalam sistem jika kamar tersebut sudah tidak ada yang menyewa
+
 
 #### Tambah kamar
 
@@ -237,11 +273,13 @@ Penjelasan: validasi checkout digunakan untuk mengubah ketersediaan kamar dalam 
 
 Penjelasan: pemilik juga dapat menambahkan unit kamar baru ke dalam sistem jika terdapat penambahan kamar kos
 
+
 #### Lihat saldo 
 
 <img width="445" height="167" alt="image" src="https://github.com/user-attachments/assets/7c7b1e7f-d31d-449a-a2ff-256a473d4ba4" />
 
 Penjelasan: pemilik kos dapat melihat saldo atau total keuangan sekarang
+
 
 ### Pembayaran tagihan
 
@@ -249,17 +287,22 @@ Penjelasan: pemilik kos dapat melihat saldo atau total keuangan sekarang
 
 Penjelasan: jika pemilik memiliki pengeluaran atau tagihan yang ingin dibayar sistem meminta untuk menginput pengeluaran daan keterangan lalu sistem akan mencetak struk atau bukti transaksi
 
+
 ### Hapus akun
 
 <img width="787" height="388" alt="image" src="https://github.com/user-attachments/assets/7581ab1b-63f9-49dd-9efd-503d472c25bf" />
 
 Penjelasan: syarat admin bisa menghapus akun user adalah jika akun user tersebut tidak memiliki saaldo atau saldo Rp 0. Karena user rena masih memiliki saldo sebesar 3jt maka akun tidak bisa di hapus
 
+
 ### Laporan transaksi
 
 <img width="341" height="63" alt="image" src="https://github.com/user-attachments/assets/766280f8-63ba-4917-829a-d516672ce840" />
 
-Penjelasan: pemilik kos dapat melihat seluruh transaksi dengan 2 pilihan menu yaitu: 1. lihat seluruh transaksi 2. cari berdasarkan username
+Penjelasan: pemilik kos dapat melihat seluruh transaksi dengan 2 pilihan menu yaitu: 
+1. lihat seluruh transaksi
+2. cari berdasarkan username
+
 
 #### Lihat seluruh transaksi
 
@@ -273,9 +316,12 @@ Penjelasan: jika pemilik kos memilih menu 1 maka sistem akan menampilkan tabel s
 
 Penjelasan: jika pemilik kos memilih menu 2 maka sistem meminta untuk menginputkan username pelanggan dan sistem akan menampilkan riwayat transaaksi user atau penyewa kos itu
 
+
 ## 7.2. Penjelasan kode
 
+
 ### 7.2.1. Def file untuk penunjang file json dan penunjang def yang general
+
 
 #### Pengalamatan file json
 
@@ -283,11 +329,13 @@ Penjelasan: jika pemilik kos memilih menu 2 maka sistem meminta untuk menginputk
 
 Penjelasan: Disini kita akan memberikan nama untuk masing masing file json agar pengalamatan berhasil terbaca oleh main py kita.
 
+
 #### Def load json dan save json
 
 <img width="205" height="145" alt="image" src="https://github.com/user-attachments/assets/da46ba99-d0c1-4ea8-ae5c-e6e0650dc9ce" />
 
 Penjelasan: Pengecekan File (os.path.exists): Program mengecek apakah file JSON tersebut sudah ada atau belum dibuat lah umpamanya. Jika file belum ada (misal saat pertama kali aplikasi dijalankan), program akan otomatis membuat file baru dengan isi data bawaan (default_data). Penanganan Error (JSONDecodeError): Jika file JSON ternyata kosong atau rusak formatnya, program tidak akan crash, melainkan aman mengembalikan nilai default_data. Lalu untuk def save_json itu pokoknya untuk nyimpen data ke file json lah misal kita habis tambah kamar atau mungkin ngelakuin tranksaksi. Mode Tulis ('w'): Membuka file target dalam mode tulis (write), yang artinya data lama di dalam file akan ditimpa dengan data terbaru yang sudah diperbarui di dalam memori program.
+
 
 #### Def Catat Tranksaksi
 
@@ -297,6 +345,7 @@ Penjelasan: Pengecekan File (os.path.exists): Program mengecek apakah file JSON 
 
 Penjelasan: Digunakan sebagai sistem "invoice berjalan" otomatis untuk merekam, membuat ID unik, menyimpan riwayat keuangan ke file transactions.json, sekaligus mencetak bukti transaksi (struk/invoice) secara real-time di terminal setiap kali ada aktivitas pembayaran. terus ada pembuatan id unik pakai kbmft lalu pakai penomoran otomatis. Terus kami pakai datetime untuk menunjukkan waktu tranksaksi aktif lah umpamanya. 
 
+
 #### Def tampilkan tabel kamar
 
 <img width="370" height="167" alt="image" src="https://github.com/user-attachments/assets/426fabde-f760-479d-8279-76f0357ae3f5" />
@@ -305,70 +354,9 @@ Penjelasan: Digunakan untuk membaca data kamar dari file rooms.json, mengurutkan
 
 ### 7.2.2. Menu utama 
 
-#### Def login
-
-<img width="418" height="335" alt="image" src="https://github.com/user-attachments/assets/ebce92c0-2616-43a9-8e55-6069181b3617" />
-
-Penjelasan: Mengelola sistem otentikasi masuk (login) bagi multi-role (Admin dan User) dengan batasan kesempatan mencoba untuk alasan keamanan. Lalu disitu kami pakai library pwinput supaya ketika kita input password akan dilambangkan dengan bintang *. Lalu untuk password kami pakai tipe data int, jadi password hanya berupa angka. Pengguna diberikan batas maksimal 3 kali percobaan salah sebelum akses dikunci.
-
-#### Def Registrasi
-
-<img width="319" height="272" alt="image" src="https://github.com/user-attachments/assets/b972df07-3150-4327-9c26-8434ad11eef2" />
-
-Penjelasan: pendaftaran akun baru bagi pengguna (user) ke dalam sistem. Mengecek ke file users.json apakah username tersebut sudah pernah terdaftar sebelumnya untuk mencegah duplikasi akun. Jika aman, data akun baru dibuat dengan peran bawaan (role: "user") dan saldo awal bernilai 0, lalu disimpan secara permanen menggunakan save_json.
-
-#### Def Main
-
-<img width="248" height="265" alt="image" src="https://github.com/user-attachments/assets/11d09de2-ec47-47ee-90bb-f9fc5c3f5ee3" />
-
-Penjelasan: Disini kita pakai os clear supaya tampilan dari terminal itu bersih. Lalu menggunakan perulangan while True yang menjadi perulangan utama dari sistem kami
-
 ### 7.2.3. Def Menu Admin
 
-#### Def tambah_kamar
-
-<img width="410" height="289" alt="image" src="https://github.com/user-attachments/assets/71c21428-11f8-4907-9410-4e4342b591c8" />
-<img width="287" height="250" alt="image" src="https://github.com/user-attachments/assets/e8cc272c-dd6e-4032-9354-f7b2fd8453a4" />
-
-Penjelasan: Digunakan oleh admin untuk menambahkan unit kamar kos baru ke dalam sistem secara interaktif dengan penomoran otomatis dan validasi input yang aman. Sistem menyaring kamar berdasarkan tipenya, mencari nomor urut angka terbesar yang sudah ada, lalu secara otomatis menaikkan angkanya (misal: jika kamar L terakhir adalah L3, maka otomatis dibuatkan L4). Menyusun data kamar baru ke dalam struktur dictionary (dengan status awal belum terpakai/False, belum ada penghuni, dan sisa hari 0), lalu menyimpannya secara permanen ke file rooms.json menggunakan fungsi save_json.
-
-#### Def Admin_Pengecekan_kamar
-
-<img width="431" height="311" alt="image" src="https://github.com/user-attachments/assets/11d94bd4-d1f1-4a9e-bd47-4f94bb5d3f56" />
-<img width="409" height="305" alt="image" src="https://github.com/user-attachments/assets/a65d27f6-0ad1-4200-8551-c211a3e25fae" />
-
-Penjelasan: Digunakan oleh admin untuk mengelola status operasional kamar kos secara berkala, yang meliputi pengubahan sisa masa sewa penghuni dan validasi proses checkout kamar. Memanggil fungsi tampilkan_tabel_kamar(). Pakai while true untuk perulangan dari sub menu di kelola kamar. Mengubah nilai sisa_hari sesuai input angka admin, lalu langsung memperbarui file rooms.json. Mengubah status kamar menjadi kosong (terpakai = False), menghapus data penghuni (penghuni = None), mereset sisa hari menjadi 0, dan menyimpan perubahannya
-
-#### Def menu
-
-<img width="422" height="341" alt="image" src="https://github.com/user-attachments/assets/97bb0f4b-4784-4c3a-ac7d-bc30427e7d17" />
-
-Penjelasan: Digunakan oleh admin untuk memantau total saldo keuangan kos secara real-time serta mencatat transaksi pengeluaran operasional (seperti pembayaran tagihan). Pakai while True untuk perulangan dari sub menu nya. Memuat seluruh data transaksi dari file transactions.json, lalu menjumlahkan total seluruh transaksi yang bertipe "pemasukan" dan menguranginya dengan total transaksi bertipe "pengeluaran" untuk mendapatkan nominal saldo akhir yang akurat
-
-#### Def Menu_Hapus_akun
-
-<img width="416" height="299" alt="image" src="https://github.com/user-attachments/assets/c8853a0d-2512-4b60-9581-325a15cd2ddd" />
-
-<img width="433" height="302" alt="image" src="https://github.com/user-attachments/assets/9aa1f439-ef93-48f3-bbd8-094f57763a53" />
-
-<img width="428" height="168" alt="image" src="https://github.com/user-attachments/assets/a65e7cb7-20e1-4c1c-a00c-ebe12e9d5b43" />
-
-Penjelasan: Memuat data dari users.json dan menyaring akun agar hanya menampilkan daftar pengguna umum (user), sehingga akun admin utama terlindungi. Tabel Status Pelanggan (PrettyTable): Menampilkan daftar akun lengkap dengan informasi saldo tersisa, status kamar aktif, serta keterangan kelayakan apakah akun tersebut sudah bisa dihapus atau belum. if user['saldo'] > 0 or kamar_aktif itu untuk Mencegah penghapusan akun jika pelanggan yang bersangkutan masih memiliki sisa saldo aktif di dompet digitalnya atau masih tercatat menghuni kamar kos (wajib bersyarat saldo 0 dan sudah checkout).
-
-#### Def menu_laporan_tranksaksi
-
-<img width="409" height="316" alt="image" src="https://github.com/user-attachments/assets/0a630de5-dba3-4383-b81d-45566d5f56c1" />
-
-Penjelasan: Digunakan oleh admin untuk memantau, merekap, dan mencari riwayat laporan arus keuangan (transaksi masuk dan keluar) yang tersimpan di dalam sistem. Memuat seluruh data transaksi secara otomatis dari file transactions.json menggunakan fungsi load_json. Opsi 1 (Seluruh Transaksi): Menampilkan seluruh riwayat arus kas ke dalam tabel terminal yang rapi menggunakan PrettyTable lengkap dengan informasi username, tipe transaksi, keterangan, dan nominal uangnya.   Opsi 2 (Pencarian Berdasarkan Username): Melakukan penyaringan data transaksi berdasarkan nama pengguna (username) yang diinputkan oleh admin, sehingga riwayat pembayaran dari penghuni tertentu bisa dilacak dengan mudah dan cepat.
-
-#### Def Menu_admin
-
-<img width="267" height="298" alt="image" src="https://github.com/user-attachments/assets/422e327a-f68d-4512-8698-2b4f24ae4eac" />
-
-Penjelasan: jadi disini kita tinggal menggunakan while True sebagai perulangan utama di menu admin, lalu menggunakan logika if elif else. Lalu kita tinggal memanggil setiap fungsi/def yang telah kita buat sebelumnya.
-
 ### 7.2.4. Def Menu User
-
 
 ## 8. File (JSON)
 
