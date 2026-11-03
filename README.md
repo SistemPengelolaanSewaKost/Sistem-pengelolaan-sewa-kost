@@ -203,7 +203,7 @@ Penjelasan:
 
 
 
-## 8. Struktur File Database (JSON)
+## 8. File (JSON)
 
 Sistem menggunakan 4 file JSON lokal sebagai media penyimpanan data:
 * `users.json`: Menyimpan data username, password, role, dan saldo.
