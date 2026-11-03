@@ -156,7 +156,7 @@ Penjelasan: jika user memilih opsi registrasi, sistem meminta user untuk menginp
 
 Penjelasan: setelah melakukan registrasi, user disilahkan login dengan menginput username dan password untuk dapat mengakses menu user
 
-### Menu user 
+#### Menu user 
 
 <img width="402" height="215" alt="image" src="https://github.com/user-attachments/assets/c4bf3e19-d94c-4af4-926b-f88b2869d791" />
 
@@ -176,69 +176,75 @@ Penjelasan: sebelum caca menyewa kamar, caca harus isi saldo terlebih dahulu.
 
 #### Melihat kamar yang ingin disewa
 
-<img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/93b5bb00-8567-4dd4-aea9-f07f132ecf3a" />
+<img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/be3dbaa7-7574-45d6-8029-944dca1988e5" />
 
-Penjelasan: 
+Penjelasan: sebelum penyewa melakukan penyewaan kamar, sistem akan menampilkan tabel informasi keseluruhan kamar agar penyewa dapat melihat ketersedian kamar 
 
 <img width="476" height="450" alt="image" src="https://github.com/user-attachments/assets/c7585865-27dd-44b6-b62e-aae03ada7a03" />
 
-Penjelasan: 
+Penjelasan: setelah melihat ketersediaan kamar, penyewa dapat memilih tipe dan fasilitas yang dinginkan serta durasi sewa beserta dengan harganya. terdapat 3 pilihan yaitu: 1. 1 bulan Rp1,000,000 2. 3 bulan Rp2,800,000 3. 1 tahun Rp11,000,000
 
 <img width="492" height="332" alt="image" src="https://github.com/user-attachments/assets/2fd9903d-8786-4fe5-b927-625cbfaae9eb" />
 
-Penjelasan:
+Penjelasan: setelah melakukan pembayaran, terdapat struk sebagai bukti telah memesan kamar
 
 #### Perpanjangan sewa
 
 <img width="562" height="266" alt="image" src="https://github.com/user-attachments/assets/1f24317b-4113-44d4-8e71-89b7fd14fd77" />
 
-Penjelasan: 
+Penjelasan: penyewa bisa melakukan perpanjangan sewa kamar, dengan pilihan menu yaitu: 1. 1 bulan Rp1,000,000 2. 3 bulan Rp2,800,000 3. 1 tahun Rp11,000,000
 
 <img width="840" height="328" alt="image" src="https://github.com/user-attachments/assets/2eeec1a6-af82-4f53-9920-87206b9c9b23" />
 
-Penjelasan:
+Penjelasan: setelah penyewa yakin ingin melakukan perpanjangan sewa kamar, sistem akan mencetak struknya
 
 ### 7.1.4. Login (sebagai admin atau pemilik kos)
 
 <img width="426" height="81" alt="image" src="https://github.com/user-attachments/assets/8206443d-4afc-4027-8b28-64500d0f6e50" />
 
-Penjelasan:
+Penjelasan: admin bisa melakukan login dengan memasukkan username 'admin' dan password '123' untuk bisa mengakses menu admin
+
+#### Menu admin
+
+<img width="450" height="237" alt="image" src="https://github.com/user-attachments/assets/0596b9e6-4168-4a6f-81eb-39ecbcd59c05" />
+
+Penjelasan: setelah admin berhasil login, sistem akan menampilkan menu admin yaitu: 1. Kelola kamar 2. Tambah kamar 3. Lihat saldo 4. Hapus akun 5. Laporan transaksi 6. Logout
 
 #### Kelola kamar
 
 <img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/68551250-b33c-4a7e-b206-2c40d9680e22" />
 
-Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel
+Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel. lalu sistem akan menampilkan menu kelola kamar yaitu: 1. ubah sisa hari dari user 2. validasi check out 3. kembali ke menu admin
 
 #### Ubah sisa hari sewa
 
 <img width="635" height="217" alt="image" src="https://github.com/user-attachments/assets/9e96bf38-62fe-497d-86d3-862e959554f3" />
 
-Penjelasan: 
+Penjelasan: admin atau pemilik kos dapat mengubah sisa hari penyewa kos menyewa kamar dengan menginput nomor kamar yang ingin diubah serta menginput sisa hari dari penyewa tesebut
 
 #### Validasi checkout
 
 <img width="593" height="90" alt="image" src="https://github.com/user-attachments/assets/2e3b9162-70f5-4958-a358-77463552ad44" />
 
-Penjelasan: 
+Penjelasan: validasi checkout digunakan untuk mengubah ketersediaan kamar dalam sistem jika kamar tersebut sudah tidak ada yang menyewa
 
 #### Tambah kamar
 
 <img width="576" height="131" alt="image" src="https://github.com/user-attachments/assets/b886c72c-78b5-4177-942b-0485dd27d9e5" />
 
-Penjelasan: 
+Penjelasan: pemilik juga dapat menambahkan unit kamar baru ke dalam sistem jika terdapat penambahan kamar kos
 
 #### Lihat saldo 
 
 <img width="445" height="167" alt="image" src="https://github.com/user-attachments/assets/7c7b1e7f-d31d-449a-a2ff-256a473d4ba4" />
 
-Penjelasan: 
+Penjelasan: pemilik kos dapat melihat saldo atau total keuangan sekarang
 
 ### Pembayaran tagihan
 
 <img width="436" height="386" alt="image" src="https://github.com/user-attachments/assets/8f198921-e650-41c0-b655-705976420aac" />
 
-Penjelasan: 
+Penjelasan: jika pemilik memiliki pengeluaran atau tagihan yang ingin dibayar sistem meminta untuk menginput pengeluaran daan keterangan lalu sistem akan mencetak struk atau bukti transaksi
 
 ### Hapus akun
 
@@ -250,19 +256,19 @@ Penjelasan: syarat admin bisa menghapus akun user adalah jika akun user tersebut
 
 <img width="341" height="63" alt="image" src="https://github.com/user-attachments/assets/766280f8-63ba-4917-829a-d516672ce840" />
 
-Penjelasan:
+Penjelasan: pemilik kos dapat melihat seluruh transaksi dengan 2 pilihan menu yaitu: 1. lihat seluruh transaksi 2. cari berdasarkan username
 
 #### Lihat seluruh transaksi
 
 <img width="797" height="588" alt="image" src="https://github.com/user-attachments/assets/67d7944b-c26e-41cb-b5dc-57de0e48dd27" />
 
-Penjelasan:
+Penjelasan: jika pemilik kos memilih menu 1 maka sistem akan menampilkan tabel seluruh transaksi 
 
 #### Lihat transaksi berdasarkan username
 
 <img width="642" height="228" alt="image" src="https://github.com/user-attachments/assets/ce6d9247-af3c-4503-b402-99f0ab28d3db" />
 
-Penjelasan:
+Penjelasan: jika pemilik kos memilih menu 2 maka sistem meminta untuk menginputkan username pelanggan dan sistem akan menampilkan riwayat transaaksi user atau penyewa kos itu
 
 ## 7.2. Penjelasan kode
 
