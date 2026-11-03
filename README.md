@@ -358,6 +358,61 @@ Penjelasan: Digunakan untuk membaca data kamar dari file rooms.json, mengurutkan
 
 ### 7.2.4. Def Menu User
 
+<img width="848" height="418" alt="Screenshot 2026-11-03 201252" src="https://github.com/user-attachments/assets/c21a003e-ed4d-4a41-a9f6-86c17edfac86" />
+
+1. Definisi fungsi: `main_user_menu(username)` adalah fungsi menu utama, dan username dipakai agar menu bisa menampilkan nama user yang sedang login.   
+2. Pesan sambutan: Program mencetak “LOGIN BERHASIL, SELAMAT DATANG” plus nama user lewat `f-string`. Pesan ini muncul sekali saja karena ada di luar perulangan.
+3. Perulangan `while True`: Membuat menu muncul terus-menerus, jadi user bisa pilih fitur berkali-kali tanpa login ulang, sampai ia memilih untuk logout.
+4. Blok `try`: Dipakai untuk menangkap error, misalnya kalau user ngetik huruf padahal diminta angka, supaya program nggak langsung crash.
+5. Tampilan menu: Baris print dengan tanda = bikin header menu tampil rapi, dan \n nambah baris kosong di atasnya.
+7. Lima pilihan menu: Cek info kamar sewaan, lihat dan isi saldo, pilih kamar yang mau disewa, perpanjang sewa, dan logout.
+8. Input pilihan: `input()` meminta user mengetik angka 1-5 dan hasilnya disimpan di variabel pilihan. Hasilnya bertipe string, jadi kalau mau dibandingkan sebagai angka perlu diubah terlebuh dahulu pakai `int()`.
+
+<img width="1273" height="481" alt="Screenshot 2026-11-03 211302" src="https://github.com/user-attachments/assets/64ee040b-fb18-4305-9132-d0ac49aab304" />
+
+1. Percabangan `if-elif`: Variabel pilihan dari input() akan dicek satu per satu. Karena input() hasilnya string, pembandingnya ditulis "1", "2", dst. (pakai tanda kutip), jadi tidak perlu int().
+2. Pilihan 1-4: Masing-masing memanggil fungsi lain dan mengirim username sebagai argumen: `menu_user_cek_info_sewa`, `menu_user_saldo`, `menu_user_sewa_kamar`, dan `menu_user_perpanjang_sewa`. Jadi setiap fitur dipisah ke fungsinya sendiri agar kodenya rapi dan gampang dikelola.
+3. Pilihan 5 (logout): Program mencetak “ANDA BERHASIL LOGOUT!!” lalu break. Ini yang menghentikan `while True`, sehingga user keluar dari menu.
+4. Blok `else`: Kalau input bukan 1 sampai 5 (misalnya “9” atau huruf), program menampilkan “PILIHAN HANYA DARI 1-5 !!” lalu menu muncul lagi karena masih di dalam perulangan.
+5. `except KeyboardInterrupt`: Ini merupakan pasangan dari try. Kalau user menekan Ctrl+C, program tidak langsung berhenti, tapi menampilkan pesan “JANGAN KOMBINASI DENGAN CTRL” dan menu tetap lanjut.
+
+<img width="1396" height="626" alt="Screenshot 2026-11-03 211808" src="https://github.com/user-attachments/assets/0851ecf4-946d-4e0c-8434-f4d0d16e2bbd" />
+
+1. Batas percobaan: Fungsi `login()` menetapkan kesempatan = 3, dan perulangan for dengan range(1, kesempatan + 1) membatasi pengguna maksimal tiga kali percobaan.
+2. `Input username`: Username diminta lewat `input()`, dengan \n untuk memberi baris kosong agar tampilan rapi.
+3. `Input password`: `pwinput.pwinput()` menyamarkan ketikan menjadi *, lalu hasilnya dikonversi dengan `int()` sehingga password harus berupa angka.
+4. Penanganan `ValueError`: Jika password bukan angka, konversi gagal, program menampilkan pesan peringatan, lalu keluar dari fungsi dengan `return`.
+5. Penanganan `KeyboardInterrupt`: Dua blok (baris 670 dan 673) menangani penekanan Ctrl+C pada `input password` dan `username`, dengan menampilkan peringatan lalu keluar dari fungsi.
+6. Pengambilan data: `load_json(FILE_USERS, [])` membaca data pengguna dari file JSON, dengan [] sebagai nilai default jika file kosong atau belum ada.
+7. Pencarian pengguna: `next()` dengan generator expression mengambil data pertama yang username dan password-nya cocok, atau None jika tidak ada.
+
+<img width="1283" height="443" alt="Screenshot 2026-11-03 212544" src="https://github.com/user-attachments/assets/073c1771-9d5f-45ad-a272-a08f28c3a213" />
+
+1. Pengecekan hasil pencarian: `if user:` bernilai benar apabila data pengguna ditemukan pada pencarian sebelumnya. Jika hasilnya None, program masuk ke blok else.
+2. Pengecekan peran admin: Jika `user['role']` bernilai "admin", program memanggil `main_admin_menu()` lalu `break` untuk menghentikan perulangan percobaan login.
+3. Pengguna biasa: Jika perannya bukan admin, program memanggil `main_user_menu(user['username'])` dengan username sebagai argumen, kemudian break.
+4. Login gagal: Pada blok `else` terluar, variabel sisa dihitung dari kesempatan - percobaan, yaitu jumlah percobaan yang masih tersisa.
+5. Masih ada kesempatan: Jika sisa > 0, program menampilkan pesan kesalahan beserta jumlah sisa percobaan, lalu perulangan berlanjut ke percobaan berikutnya.
+6. Kesempatan habis: Jika sisa sudah 0, program menampilkan pesan bahwa akses ditolak, lalu `return False` untuk mengakhiri fungsi dengan status gagal.
+
+<img width="1381" height="567" alt="Screenshot 2026-11-03 213609" src="https://github.com/user-attachments/assets/1296efb3-d609-4ad6-9834-e00a4cbd9e43" />
+
+1. Input username: Username baru diminta lewat input() di dalam blok try. Jika pengguna menekan Ctrl+C, program menampilkan peringatan.
+2. Input password: `pwinput.pwinput()` menyamarkan ketikan menjadi *, lalu hasilnya dikonversi dengan int() sehingga password harus berupa angka.
+3. Penanganan ValueError: Jika password bukan angka, konversi gagal dan program menampilkan pesan peringatan. Pada bagian ini tidak ada return, jadi eksekusi tetap berlanjut.
+Penanganan `KeyboardInterrupt` pada password: Program menampilkan peringatan lalu keluar dari fungsi dengan return.
+5. Pengambilan data: `load_json(FILE_USERS, [])` membaca daftar pengguna yang sudah terdaftar, dengan [] sebagai nilai default jika file kosong atau belum ada.
+6. Pengecekan username duplikat: any() dengan generator expression memeriksa apakah ada pengguna yang username-nya sama dengan input. Jika ada, program menampilkan pesan bahwa username sudah digunakan, lalu keluar dari fungsi dengan return.
+
+<img width="1028" height="316" alt="Screenshot 2026-11-03 215619" src="https://github.com/user-attachments/assets/bbf80e68-9b84-48c6-8597-54ef2b63b00b" />
+
+1. Pembuatan data pengguna: Dictionary `new_user` menyimpan empat data: username dan password dari input sebelumnya, role yang diset "user", dan saldo dengan nilai awal 0.
+2. Penetapan peran otomatis: Karena role ditulis langsung sebagai "user", setiap akun hasil registrasi pasti berperan sebagai pengguna biasa. Akun admin tidak bisa dibuat lewat fitur ini.
+3. Penambahan ke daftar: `users.append(new_user)` menambahkan data baru ke daftar pengguna yang tadi dibaca dari file JSON.
+4. Penyimpanan ke file: `save_json(FILE_USERS, users)` menulis daftar yang sudah diperbarui kembali ke file JSON, sehingga akun tersimpan permanen.
+5. Konfirmasi: Program menampilkan pesan bahwa registrasi berhasil dan pengguna dapat langsung login.
+
+
 ## 8. File (JSON)
 
 Sistem menggunakan 4 file JSON lokal sebagai media penyimpanan data:
