@@ -155,6 +155,28 @@ Penjelasan:
 
 Penjelasan:
 
+### Perpanjangan sewa
+
+<img width="562" height="266" alt="image" src="https://github.com/user-attachments/assets/1f24317b-4113-44d4-8e71-89b7fd14fd77" />
+
+Penjelasan: 
+
+<img width="840" height="328" alt="image" src="https://github.com/user-attachments/assets/2eeec1a6-af82-4f53-9920-87206b9c9b23" />
+
+Penjelasan:
+
+### Login (sebagai admin atau pemilik kos)
+
+<img width="426" height="81" alt="image" src="https://github.com/user-attachments/assets/8206443d-4afc-4027-8b28-64500d0f6e50" />
+
+Penjelasan:
+
+### Kelola kamar
+
+<img width="672" height="393" alt="image" src="https://github.com/user-attachments/assets/68551250-b33c-4a7e-b206-2c40d9680e22" />
+
+Penjelasan: informasi keseluruhaan kamar dapat dilhat secara lengkap oleh admin berupa tabel
+
 
 
 
