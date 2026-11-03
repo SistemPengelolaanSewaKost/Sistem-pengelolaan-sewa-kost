@@ -73,6 +73,15 @@ Dari sisi pemilik, pencatatan data kamar, penyewa, dan pembayaran sering dilakuk
 
 <img width="1812" height="1032" alt="flowchart terbaru-Page-1 drawio" src="https://github.com/user-attachments/assets/114feae3-4faf-4c50-9b15-65a901ab2a04" />
 
+Ketika program pertama kali dijalankan (START), pengguna akan dihadapkan pada Tampilan Utama dengan tiga pilihan menu: Login, Registrasi, atau Keluar.
+
+Proses Registrasi (Pilihan 2): Pengguna memasukkan username dan password baru lalu sistem langsung melakukan pengecekan ke file users.json untuk melihat apakah username tersebut sudah dipakai atau belum. Jika terdeteksi duplikat atau udah ada, sistem akan meminta pengguna untuk melakukan login ulang. Jika username belum ada, data akun baru disimpan ke users.json dan pengguna diarahkan kembali ke menu awal.
+
+Proses Login (Pilihan 1): Pengguna memasukkan username dan password lalu sistem memverifikasi data tersebut ke file users.json.
+Jika Login Gagal: Sistem memberikan batasan percobaan sebanyak 3 kali. Setiap kali gagal, kuota percobaan berkurang 1. Jika kesempatan habis (sisa == 0), sistem memberikan opsi apakah pengguna ingin kembali ke menu utama atau memilih keluar dari program.
+Jika Login Berhasil: Sistem mengecek role dari akun tersebut. Akun ber-role Admin akan masuk ke Menu Admin, sedangkan akun ber-role User akan masuk ke Menu User.
+Keluar (Pilihan 3): Keluar dari program (END)
+
 
 <img width="4812" height="1622" alt="flowchart terbaru-Halaman-2 drawio" src="https://github.com/user-attachments/assets/b21da00a-c56a-429c-8b79-0e7e83815cd7" />
 
